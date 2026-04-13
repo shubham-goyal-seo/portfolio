@@ -42,7 +42,7 @@ export const aboutFacts = [
 
 export const brands = [
   { name: "Truemeds", logo: "https://du8ef2qvb6oy7.cloudfront.net/media/images/1018f6b6-263e-44df-b129-a360601ca484/truemedslogo2x.png?fm=jpg&q=80&fit=crop&w=900&h=470&crop=1000%2C1000%2C0%2C0", primary: true },
-  { name: "Amazon Business", logo: "/amazon_business.png" },
+  { name: "Amazon Business", logo: "/portfolio/amazon_business.png" },
   { name: "P&G", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Procter_%26_Gamble_logo.svg/250px-Procter_%26_Gamble_logo.svg.png" },
   { name: "Microsoft SMB", logo: "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" },
   { name: "UNICEF UAE", logo: "https://upload.wikimedia.org/wikipedia/commons/5/57/UNICEF_Logo.png" },
@@ -50,13 +50,13 @@ export const brands = [
   { name: "Cult Sport", logo: "https://d3q27bh1u24u2o.cloudfront.net/news/Cult_Sport.png" },
   { name: "Freecharge", logo: "https://upload.wikimedia.org/wikipedia/en/1/1c/Freecharge_logo_%28lightning%29.png" },
   { name: "HBR Ascend", logo: "https://upload.wikimedia.org/wikipedia/commons/5/53/HBRAscend_Logo.png" },
-  { name: "Label Ritu Kumar", logo: "https://i.pinimg.com/736x/75/76/1a/75761ab4b851935a5eb759edd6bfb7c3.jpg" },
-  { name: "SUGAR Cosmetics", logo: "https://sugarcosmetics.com/cdn/shop/files/sugar_logo_new.png?v=1680861942", dark: true },
+  { name: "Label Ritu Kumar", logo: "/portfolio/ritu.png" },
+  { name: "SUGAR Cosmetics", logo: "/portfolio/sugar.png" },
   { name: "Emami Zanducare", logo: "https://upload.wikimedia.org/wikipedia/en/e/ea/Zandu_Realty.png" },
   { name: "Foxstar Studios", logo: "https://www.behindwoods.com/tamil-movies/slideshow/best-logo-blocks-of-production-companies/images/fox-star-studios.jpg" },
   { name: "Charlie Banana", logo: "https://www.charliebanana.com/cdn/shop/files/CB_Logo_legacy_a4c3c7ec-032b-4de5-a2e6-3b764e4e54ae.png?crop=center&height=1200&v=1755333831&width=1200" },
   { name: "PlantX", logo: "https://plantx.com/cdn/shop/files/newlogo_black.png?v=1628253174&width=500" },
-  { name: "Prepaze", logo: "https://upload.wikimedia.org/wikipedia/commons/d/db/Prepaze_Logo.png" },
+  { name: "Prepaze", logo: "/portfolio/prepaze_logo_kkhxn5.svg" },
   { name: "GREedge", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1KfMN9A5G7_BEKzftNv1yLEeidBDu9geP6Q&s" },
 ];
 

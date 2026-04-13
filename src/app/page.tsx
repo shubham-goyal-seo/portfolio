@@ -212,7 +212,7 @@ export default function Home() {
             <p style={{ fontSize: 16, lineHeight: 1.8, color: "var(--muted)" }}>At Truemeds, I inherited a near-zero organic channel and turned it into the company&apos;s largest acquisition lever — 27x traffic growth, $11.1M in incremental ARR, a custom AI-ready CMS powering 250K+ pages, and a community reputation engine spanning 20+ subreddits and Quora. I manage a team of 18–22 contributors and report directly to the CMO and CTO with a $2–3M annual budget.</p>
             <p style={{ fontSize: 16, lineHeight: 1.8, color: "var(--muted)" }}>Before Truemeds, I led SEO and ASO at Dentsu India for 13+ global brands — Amazon Business, P&amp;G, Microsoft SMB, UNICEF UAE, and more — managing a 28-person team and achieving category-defining organic growth across every vertical I touched.</p>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 20, marginTop: 40, paddingTop: 32, borderTop: "1px solid var(--border)" }}>
+          <div className="about-facts">
             {aboutFacts.map((fact, i) => {
               const icons = [<Briefcase key="b" size={16} />, <Star key="s" size={16} />, <GraduationCap key="g" size={16} />, <DollarSign key="d" size={16} />];
               return (<div key={fact.label}><div style={{ fontSize: 11, fontWeight: 700, color: "var(--muted)", textTransform: "uppercase", letterSpacing: 1, marginBottom: 6, display: "flex", alignItems: "center", gap: 6 }}>{icons[i]} {fact.label}</div><div style={{ fontSize: 15, fontWeight: 700, color: "var(--ink)" }}>{fact.value}</div></div>);
@@ -315,7 +315,7 @@ export default function Home() {
             <span className="lbl"><Link2 size={14} /> Backlink &amp; Authority Growth</span>
             <div className="two-col" style={{ alignItems: "center", gap: 40, marginTop: 0 }}>
               <p style={{ fontSize: 15, color: "var(--muted)", lineHeight: 1.75 }}>I grew our Domain Rating from 28 to 73 — approximately 3x — through a combination of off-page strategy, UGC-focused campaigns, high-authority content partnerships, and regulatory certifications including AACI. Current backlink profile: 222K backlinks across 6.4K referring domains (all-time: 1.2M backlinks, 11.1K domains).</p>
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
+              <div className="metric-grid-2">
                 <div className="mcard" style={{ padding: 16, textAlign: "center" }}><div className="mn mn-green" style={{ fontSize: 28 }}>73</div><div className="ml" style={{ fontSize: 12 }}>Domain Rating</div><div className="mc">Was 28 (+14 recently)</div></div>
                 <div className="mcard" style={{ padding: 16, textAlign: "center" }}><div className="mn" style={{ fontSize: 28 }}>222K</div><div className="ml" style={{ fontSize: 12 }}>Total Backlinks</div><div className="mc">+70.8K recent growth</div></div>
               </div>
@@ -363,9 +363,9 @@ export default function Home() {
                   <div style={{ fontSize: 13, fontWeight: 600, color: "#FED7AA", marginBottom: 4 }}>Which is the best chronic care meds delivery in india? — Reddit</div>
                   <div style={{ fontSize: 12, color: "rgba(255,255,255,0.55)", lineHeight: 1.5 }}>21 Dec 2025 — <strong style={{ color: "rgba(255,255,255,0.8)" }}>Truemeds, easy.</strong> For chronic meds their whole thing is repeat refills plus cheaper alternatives with pharmacist guidance... <span style={{ color: "#93C5FD" }}>Top answer</span></div>
                 </div>
-                <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+                <div className="serp-stats">
                   {[{ val: "4", label: "Comments on post", color: "#60A5FA" }, { val: "#1", label: "Discussions ranking", color: "#34D399" }, { val: "AI", label: "Cited in AI Overview", color: "#A78BFA" }, { val: "68", label: "Live posts indexed", color: "#FBBF24" }].map((item) => (
-                    <div key={item.label} style={{ background: "rgba(255,255,255,0.06)", borderRadius: 8, padding: "10px 14px", flex: 1, minWidth: 120, textAlign: "center" }}>
+                    <div key={item.label} className="serp-stat-item">
                       <div style={{ fontSize: 18, fontWeight: 800, color: item.color, fontFamily: "var(--ff-display)" }}>{item.val}</div>
                       <div style={{ fontSize: 11, color: "rgba(255,255,255,0.45)", marginTop: 2 }}>{item.label}</div>
                     </div>
@@ -415,7 +415,6 @@ export default function Home() {
               </a>
             ))}
           </div>
-          <p style={{ fontSize: 12, color: "var(--muted)", marginTop: 12, fontStyle: "italic" }}>Note: Some documents are internally shared. Request access or replace with public-facing versions before distributing this portfolio.</p>
         </div>
       </section>
 
