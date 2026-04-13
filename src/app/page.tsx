@@ -161,7 +161,7 @@ export default function Home() {
                 <div className="hero-eyebrow"><span className="hero-eyebrow-dot" />Organic Growth &nbsp;&middot;&nbsp; PLG &nbsp;&middot;&nbsp; SEO &nbsp;&middot;&nbsp; AI Systems</div>
                 <div className="hero-name-row">
                   <div className="hero-photo-container">
-                    <img className="hero-photo" src="/shubham-goyal-portfolio/photo.png" alt="Shubham Goyal" />
+                    <img className="hero-photo" src="/portfolio/photo.png" alt="Shubham Goyal" />
                   </div>
                   <h1 className="hero-name" style={{ fontFamily: "var(--ff-display)" }}>Shubham<br />Goyal</h1>
                 </div>

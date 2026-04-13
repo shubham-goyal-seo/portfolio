@@ -251,7 +251,7 @@ export const dentsuSystems = [
 ];
 
 export const workSamples = [
-  { icon: "FileText", title: "Yearly Organic Growth Plan (SEO + ASO)", desc: "Full annual plan for an e-pharmacy — tied to category-level revenue impact, seasonal search behavior, and product margin mix. Includes HTML overview with linked files.", href: "/shubham-goyal-portfolio/plan-of-action" },
+  { icon: "FileText", title: "Yearly Organic Growth Plan (SEO + ASO)", desc: "Full annual plan for an e-pharmacy — tied to category-level revenue impact, seasonal search behavior, and product margin mix. Includes HTML overview with linked files.", href: "/portfolio/plan-of-action" },
   { icon: "BarChart3", title: "SEO AOP — Full Annual Operating Plan", desc: "Organic channel-level forecasts, priority content buckets, and projected revenue contribution by quarter.", href: "https://docs.google.com/spreadsheets/d/17rFGdnQPVmLyNm34m536YsoW0prdZX-d9ZP-_ue_OfU/edit?usp=drive_link" },
   { icon: "Search", title: "Category Keyword Research + Competitor Unboxing", desc: "Segment-by-segment keyword builds across 10+ product categories with competitor gap analysis mapped to acquisition opportunity.", href: "https://docs.google.com/spreadsheets/d/1bOmYA3tV42XZFYJ7yz9iC5PaEtLZ_i6bWnu_cFJ0msI/edit?usp=drive_link" },
   { icon: "PenTool", title: "Content Execution Plan", desc: "Keyword buckets organized into content briefs, priority tiers, and team workflow — a production-ready execution plan.", href: "https://docs.google.com/spreadsheets/d/13YeJs_vNXDTqBwj2y_YWBAd-XAe8d1nl7Up3RyYFSFo/edit?usp=drive_link" },

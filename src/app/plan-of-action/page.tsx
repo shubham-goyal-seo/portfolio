@@ -75,7 +75,7 @@ export default function PlanOfActionPage() {
       {/* Embedded content */}
       <div style={{ flex: 1, display: "flex", justifyContent: "center" }}>
         <iframe
-          src="/shubham-goyal-portfolio/plan-of-action-organic-growth.html"
+          src="/portfolio/plan-of-action-organic-growth.html"
           title="Plan of Action — Organic Growth"
           style={{
             width: "100%",
