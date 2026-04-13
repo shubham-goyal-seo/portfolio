@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import BrandImage from "@/components/BrandImage";
 import ContactForm from "@/components/ContactForm";
+import MobileNav from "@/components/MobileNav";
 import {
   Trophy, TrendingUp, BadgeCheck, GraduationCap,
   FileText, BarChart3, Search, PenTool, Smartphone,
@@ -149,6 +150,7 @@ export default function Home() {
             <a href="#samples">Work Samples</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
           </div>
           <a href="#contact" className="nav-cta"><Mail size={14} /> Get in touch</a>
+          <MobileNav />
         </div>
       </nav>
 
