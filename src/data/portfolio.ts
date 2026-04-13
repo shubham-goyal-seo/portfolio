@@ -40,7 +40,7 @@ export const aboutFacts = [
   { label: "Budget Managed", value: "$2–3M Annually" },
 ];
 
-export const brands = [
+export const brands: { name: string; logo: string; primary?: boolean; dark?: boolean }[] = [
   { name: "Truemeds", logo: "https://du8ef2qvb6oy7.cloudfront.net/media/images/1018f6b6-263e-44df-b129-a360601ca484/truemedslogo2x.png?fm=jpg&q=80&fit=crop&w=900&h=470&crop=1000%2C1000%2C0%2C0", primary: true },
   { name: "Amazon Business", logo: "/portfolio/amazon_business.png" },
   { name: "P&G", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Procter_%26_Gamble_logo.svg/250px-Procter_%26_Gamble_logo.svg.png" },
