@@ -1,0 +1,738 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>PoA Year’25</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="33614e83-d7d5-80bc-86e3-c13bc79ce4a9" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">🚀</span></div><h1 class="page-title" dir="auto">PoA Year’25</h1><p class="page-description" dir="auto"></p><table class="properties"><tbody><tr class="property-row property-row-person"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/friends_gray.svg" style="width:14px;height:14px;display:block"/></span></th><td><span class="user"><span class="icon text-icon user-icon"><span class="user-icon-inner">S</span></span>Shubham Goyal</span></td></tr><tr class="property-row property-row-status"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/burst_gray.svg" style="width:14px;height:14px;display:block"/></span>Status</th><td><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Done</span></td></tr><tr class="property-row property-row-relation"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/target_gray.svg" style="width:14px;height:14px;display:block"/></span>Project</th><td><a href="https://www.notion.so/AOP-Planning-275c31f827de44e4b51d753437ead503?pvs=21"><img class="icon notion-static-icon" src="https://www.notion.so/icons/target_lightgray.svg"/>AOP Planning</a></td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>Summary</th><td>This document outlines the SEO goals for the year 2025, including traffic projections and new content categories. It also lists the product and tech dependencies, as well as the initiative impact. Additionally, it mentions data dependencies, review and publishing dependencies, and off-page activities such as paid guest postings.</td></tr><tr class="property-row property-row-date"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/calendar_gray.svg" style="width:14px;height:14px;display:block"/></span>Due</th><td><time>May 15, 2024</time></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/arrow-circle-down_gray.svg" style="width:14px;height:14px;display:block"/></span>Priority</th><td><span class="selected-value select-value-color-red">High</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/tag_gray.svg" style="width:14px;height:14px;display:block"/></span>Tags</th><td><span class="selected-value select-value-color-green">Plan</span></td></tr><tr class="property-row property-row-date"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/calendar_gray.svg" style="width:14px;height:14px;display:block"/></span>Completed On</th><td><time>May 15, 2024</time></td></tr></tbody></table></header><div class="page-body"><div style="display:contents" dir="auto"><h2 id="33614e83-d7d5-813d-8ead-fda29b68b5ad" class="">SEO Goals</h2></div><div style="display:contents" dir="ltr"><table id="33614e83-d7d5-81fc-a347-e1ea694ca921" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-816a-a6d7-fd63502f39b9"><th id="vPsi" class="simple-table-header-color simple-table-header" style="width:86px">Traffic Projection</th><th id="&lt;~|v" class="simple-table-header-color simple-table-header" style="width:108.77083587646484px"></th><th id="\[JN" class="simple-table-header-color simple-table-header" style="width:108.77083587646484px"></th><th id="~|rU" class="simple-table-header-color simple-table-header" style="width:108.77083587646484px"></th><th id="X~ZH" class="simple-table-header-color simple-table-header" style="width:108.77083587646484px"></th><th id="&lt;YOn" class="simple-table-header-color simple-table-header" style="width:108.77083587646484px"></th><th id="p\CP" class="simple-table-header-color simple-table-header" style="width:108.77083587646484px"></th><th id="PAig" class="simple-table-header-color simple-table-header" style="width:108.77083587646484px"></th><th id="rlKN" class="simple-table-header-color simple-table-header" style="width:108.77083587646484px"></th><th id="j\Jv" class="simple-table-header-color simple-table-header" style="width:108.77083587646484px"></th><th id="N;gl" class="simple-table-header-color simple-table-header" style="width:108.77083587646484px"></th><th id="&gt;mqC" class="simple-table-header-color simple-table-header" style="width:108.77083587646484px"></th><th id="FnyL" class="simple-table-header-color simple-table-header" style="width:108.77083587646484px">FY 25-26 Q1</th><th id="AazR" class="simple-table-header-color simple-table-header" style="width:108.77083587646484px"></th><th id="qcBa" class="simple-table-header-color simple-table-header" style="width:108.77083587646484px"></th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-813b-9aaf-edd9344486d3"><th id="vPsi" class="block-color-purple_background simple-table-header" style="width:86px">Month</th><td id="&lt;~|v" class="block-color-purple_background" style="width:108.77083587646484px">May&#x27;24</td><td id="\[JN" class="block-color-purple_background" style="width:108.77083587646484px">Jun&#x27;24</td><td id="~|rU" class="block-color-purple_background" style="width:108.77083587646484px">Jul&#x27;24</td><td id="X~ZH" class="block-color-purple_background" style="width:108.77083587646484px">Aug&#x27;24</td><td id="&lt;YOn" class="block-color-purple_background" style="width:108.77083587646484px">Sep&#x27;24</td><td id="p\CP" class="block-color-purple_background" style="width:108.77083587646484px">Oct&#x27;24</td><td id="PAig" class="block-color-purple_background" style="width:108.77083587646484px">Nov&#x27;24</td><td id="rlKN" class="block-color-purple_background" style="width:108.77083587646484px">Dec&#x27;24</td><td id="j\Jv" class="block-color-purple_background" style="width:108.77083587646484px">Jan&#x27;25</td><td id="N;gl" class="block-color-purple_background" style="width:108.77083587646484px">Feb&#x27;25</td><td id="&gt;mqC" class="block-color-purple_background" style="width:108.77083587646484px">Mar&#x27;25</td><td id="FnyL" class="block-color-purple_background" style="width:108.77083587646484px">Apr&#x27;25</td><td id="AazR" class="block-color-purple_background" style="width:108.77083587646484px">May&#x27;25</td><td id="qcBa" class="block-color-purple_background" style="width:108.77083587646484px">Jun&#x27;25</td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-81a6-a05d-fdc8162f6a57"><th id="vPsi" class="simple-table-header-color simple-table-header" style="width:86px">Projection</th><td id="&lt;~|v" class="" style="width:108.77083587646484px">1.26M - 1.27M</td><td id="\[JN" class="" style="width:108.77083587646484px">1.59M - 1.60M</td><td id="~|rU" class="" style="width:108.77083587646484px">1.76M - 1.78M</td><td id="X~ZH" class="" style="width:108.77083587646484px">1.95M - 1.97M</td><td id="&lt;YOn" class="" style="width:108.77083587646484px">2.14M - 2.17M</td><td id="p\CP" class="" style="width:108.77083587646484px">2.36M - 2.38M</td><td id="PAig" class="" style="width:108.77083587646484px">2.61M - 2.64M</td><td id="rlKN" class="" style="width:108.77083587646484px">2.89M - 2.92M</td><td id="j\Jv" class="" style="width:108.77083587646484px">3.21M - 3.24M</td><td id="N;gl" class="" style="width:108.77083587646484px">3.59M - 3.63M</td><td id="&gt;mqC" class="" style="width:108.77083587646484px">4.05M - 4.09M</td><td id="FnyL" class="" style="width:108.77083587646484px">4.54M - 4.59M</td><td id="AazR" class="" style="width:108.77083587646484px">5.06M - 5.11M</td><td id="qcBa" class="" style="width:108.77083587646484px">5.45M - 5.51M</td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><h2 id="33614e83-d7d5-815d-91fc-c104fe54dda6" class="">Requisites to Achieve Goals</h2></div><div style="display:contents" dir="auto"><p id="33614e83-d7d5-803e-a83d-d15d3cd0781c" class=""><a href="https://docs.google.com/spreadsheets/d/1bOmYA3tV42XZFYJ7yz9iC5PaEtLZ_i6bWnu_cFJ0msI/edit?gid=43142464#gid=43142464">https://docs.google.com/spreadsheets/d/1bOmYA3tV42XZFYJ7yz9iC5PaEtLZ_i6bWnu_cFJ0msI/edit?gid=43142464#gid=43142464</a></p></div><div style="display:contents" dir="auto"><p id="33614e83-d7d5-8024-9864-e838b34fff4a" class="">
+</p></div><div style="display:contents" dir="auto"><h3 id="33614e83-d7d5-8144-bf11-cad35ca06a95" class=""><strong>New Content Categories</strong></h3></div><div style="display:contents" dir="ltr"><table id="33614e83-d7d5-8198-92f4-fd5389e3a993" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-815f-93ae-c5b828efd210"><th id="|kT}" class="simple-table-header-color simple-table-header" style="width:190.99478149414062px">Category</th><th id="Mm&gt;i" class="simple-table-header-color simple-table-header" style="width:138.00416259765626px">No. of Pages</th><th id="jBNs" class="simple-table-header-color simple-table-header" style="width:138.00416259765626px">Target KWs</th><th id="GRJ^" class="simple-table-header-color simple-table-header" style="width:138.00416259765626px">Target SV</th><th id="E~G^" class="simple-table-header-color simple-table-header" style="width:241.97918701171875px">Expected Traffic</th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-81cb-8b44-f13449f8cdcb"><td id="|kT}" class="" style="width:190.99478149414062px"><strong>Disease Pages</strong></td><td id="Mm&gt;i" class="" style="width:138.00416259765626px">427</td><td id="jBNs" class="" style="width:138.00416259765626px">28,865</td><td id="GRJ^" class="" style="width:138.00416259765626px">40,199,500</td><td id="E~G^" class="" style="width:241.97918701171875px"><em>Mar’25 - 22,777<br/>June’25 - 73,337</em><br/><em>+ Impact on PDP/OTC linked pages directly with rankings improvements.</em></td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-819d-976a-fa6562da02d1"><td id="|kT}" class="" style="width:190.99478149414062px"><strong>Ayurveda Ingredient Pages<br/></strong><a href="https://docs.google.com/spreadsheets/d/13YeJs_vNXDTqBwj2y_YWBAd-XAe8d1nl7Up3RyYFSFo/edit?gid=1079747291#gid=1079747291">https://docs.google.com/spreadsheets/d/13YeJs_vNXDTqBwj2y_YWBAd-XAe8d1nl7Up3RyYFSFo/edit?gid=1079747291#gid=1079747291</a></td><td id="Mm&gt;i" class="" style="width:138.00416259765626px">302</td><td id="jBNs" class="" style="width:138.00416259765626px">30,000</td><td id="GRJ^" class="" style="width:138.00416259765626px">38,422,340</td><td id="E~G^" class="" style="width:241.97918701171875px"><em>Mar’25 - 64,919<br/>June’25 - 1,35,667 + Impact on Related OTC linked pages directly with rankings improvements.</em></td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-81d0-8bf6-dc7d21536956"><td id="|kT}" class="" style="width:190.99478149414062px"><strong>Web - Stories</strong></td><td id="Mm&gt;i" class="" style="width:138.00416259765626px">15/Month</td><td id="jBNs" class="" style="width:138.00416259765626px"><em>Will be taken up on monthly basis</em></td><td id="GRJ^" class="" style="width:138.00416259765626px"><em>Will be taken up on monthly basis</em></td><td id="E~G^" class="" style="width:241.97918701171875px"><em><strong>Monthly Google Discover Traffic</strong></em><em><br/>Mar’25 - 31,176</em></td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><h3 id="33614e83-d7d5-8126-a65e-c5e35ba869e2" class="">Content Scaling</h3></div><div style="display:contents" dir="ltr"><table id="33614e83-d7d5-812c-ad72-fd7d22cb32f2" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-8147-9657-f9c49c743195"><th id="Kmym" class="simple-table-header-color simple-table-header" style="width:168px">Category</th><th id="abi]" class="simple-table-header-color simple-table-header" style="width:168px">No. of Pages</th><th id="klLe" class="simple-table-header-color simple-table-header" style="width:168px">Target KWs</th><th id="UYm=" class="simple-table-header-color simple-table-header" style="width:168px">Target SV</th><th id="hgOX" class="simple-table-header-color simple-table-header" style="width:168px">Expected Traffic</th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-8193-8aef-cf75e735b4f8"><td id="Kmym" class="" style="width:168px"><strong>Rx Required (Unique)<br/></strong><em>KW Search Volume &gt;5K</em></td><td id="abi]" class="" style="width:168px">3,090</td><td id="klLe" class="" style="width:168px">14,511</td><td id="UYm=" class="" style="width:168px">83,074,030</td><td id="hgOX" class="" style="width:168px"><em>Sep’24 - 18,52,816 <br/>Mar’25 - 30,83,536<br/>June’25 - 39,21,974</em></td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-8141-9c84-de2b888b0995"><td id="Kmym" class="" style="width:168px"><strong>Rx Required (Programmatic High Volume)</strong></td><td id="abi]" class="" style="width:168px">9,610</td><td id="klLe" class="" style="width:168px">13,036</td><td id="UYm=" class="" style="width:168px">15,942,880</td><td id="hgOX" class="" style="width:168px"></td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-8100-8cbc-d846eff5ec59"><td id="Kmym" class="" style="width:168px"><strong>Rx Required (Programmatic Planned)</strong></td><td id="abi]" class="" style="width:168px">~90K</td><td id="klLe" class="" style="width:168px">-</td><td id="UYm=" class="" style="width:168px">-</td><td id="hgOX" class="" style="width:168px"></td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-81c4-bcb2-ed5d9291838d"><td id="Kmym" class="" style="width:168px"><strong>OTC Pages</strong></td><td id="abi]" class="" style="width:168px">~40K</td><td id="klLe" class="" style="width:168px">~18K</td><td id="UYm=" class="" style="width:168px"><em>*Total Volume Calculation is in progress.</em></td><td id="hgOX" class="" style="width:168px"><em>Sep’24 - 78,240 <br/>Mar’25 - 2,90,643<br/>June’25 - 4,21,119</em></td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-81fa-9dec-e935dffc7335"><td id="Kmym" class="" style="width:168px"><strong>Salt Pages</strong></td><td id="abi]" class="" style="width:168px"><strong>2,675 (Key Pages)</strong><br/><em>Total 6K for interlinking and supporting content</em></td><td id="klLe" class="" style="width:168px">-</td><td id="UYm=" class="" style="width:168px"><strong>Apollo Traffic:</strong> 1,025,854</td><td id="hgOX" class="" style="width:168px"><em>Sep’24 - 74,161 <br/>Mar’25 - 2,33,038<br/>June’25 - 3,95,988</em></td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-81f2-93fa-c819b4ee7ade"><td id="Kmym" class="" style="width:168px"><strong>Blog Pages</strong></td><td id="abi]" class="" style="width:168px">50-60/Month</td><td id="klLe" class="" style="width:168px"><em>Will be taken up monthly basis</em></td><td id="UYm=" class="" style="width:168px"><em>Will be taken up monthly basis</em></td><td id="hgOX" class="" style="width:168px"><em>Sep’24 - 1,60,770<br/>Mar’25 - 3,65,155<br/>June’25 - 5,04,443</em></td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><h2 id="33614e83-d7d5-8107-8408-cae1d225b6b1" class=""><strong>Product - Tech Dependencies (Priority List)</strong></h2></div><div style="display:contents" dir="ltr"><table id="33614e83-d7d5-8129-84b6-da52946a5eb9" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-8119-8273-dbf3bf0f6b83"><th id="Yqk&lt;" class="simple-table-header-color simple-table-header" style="width:168px">S. No.</th><th id=";UHV" class="simple-table-header-color simple-table-header" style="width:168px">Tasks</th><th id="n?}{" class="simple-table-header-color simple-table-header" style="width:168px">BRD/Description</th><th id="&lt;hn`" class="simple-table-header-color simple-table-header" style="width:168px">Expected Go-Live Timelines</th><th id="wcqc" class="simple-table-header-color simple-table-header" style="width:168px">Priority</th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-81a1-994f-dba0f7fb73c5"><td id="Yqk&lt;" class="" style="width:168px">1.</td><td id=";UHV" class="" style="width:168px"><strong>Programmatic Content Scaling Feature</strong></td><td id="n?}{" class="" style="width:168px"></td><td id="&lt;hn`" class="" style="width:168px">16 May’24</td><td id="wcqc" class="" style="width:168px">P0</td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-81de-824c-ee8117152672"><td id="Yqk&lt;" class="" style="width:168px">2. </td><td id=";UHV" class="" style="width:168px"><strong>Blog Redesign</strong></td><td id="n?}{" class="" style="width:168px"></td><td id="&lt;hn`" class="" style="width:168px">16 May’24</td><td id="wcqc" class="" style="width:168px">P0</td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-81ed-812a-c9765531c062"><td id="Yqk&lt;" class="" style="width:168px">3.</td><td id=";UHV" class="" style="width:168px"><strong>New Salt Pages Addition Functionality + Pepper Integration</strong></td><td id="n?}{" class="" style="width:168px"></td><td id="&lt;hn`" class="" style="width:168px">25 May’24</td><td id="wcqc" class="" style="width:168px">P0</td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-813f-92dc-e5325808e169"><td id="Yqk&lt;" class="" style="width:168px">4.</td><td id=";UHV" class="" style="width:168px"><strong>Category Pages Breadcrumb Functionality Changes</strong></td><td id="n?}{" class="" style="width:168px"></td><td id="&lt;hn`" class="" style="width:168px">30 May’24</td><td id="wcqc" class="" style="width:168px">P0</td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-81f7-8b90-df83fbd81164"><td id="Yqk&lt;" class="" style="width:168px">5.</td><td id=";UHV" class="" style="width:168px"><strong>Google Analytics Setup w/ Big Query Integration</strong></td><td id="n?}{" class="" style="width:168px"></td><td id="&lt;hn`" class="" style="width:168px">30 May’24</td><td id="wcqc" class="" style="width:168px">P0</td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-8137-bc35-ce6bf8ef0413"><td id="Yqk&lt;" class="" style="width:168px">5.</td><td id=";UHV" class="" style="width:168px"><strong>Disease Pages + Pepper Integration</strong></td><td id="n?}{" class="" style="width:168px">Disease pages frontend and backend content functionality to be created along with the integration with Pepper Content Portal. Dynamic product linking features will be included.</td><td id="&lt;hn`" class="" style="width:168px">10 Jun’24</td><td id="wcqc" class="" style="width:168px">P1</td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-8124-bb16-d671aa848599"><td id="Yqk&lt;" class="" style="width:168px">7. </td><td id=";UHV" class="" style="width:168px"><strong>Ayurveda Category Pages + Pepper Integration</strong></td><td id="n?}{" class="" style="width:168px">Ayurveda ingredient pages frontend and backend content functionality to be created along with the integration with Pepper Content Portal. Dynamic product linking features will be included.</td><td id="&lt;hn`" class="" style="width:168px">20 Jun’24</td><td id="wcqc" class="" style="width:168px">P1</td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-811f-97f1-f831db634527"><td id="Yqk&lt;" class="" style="width:168px">8.</td><td id=";UHV" class="" style="width:168px"><strong>OTC Content/Page Redesign (Avinash)</strong></td><td id="n?}{" class="" style="width:168px"></td><td id="&lt;hn`" class="" style="width:168px">20 Jun’24</td><td id="wcqc" class="" style="width:168px">P1</td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-8115-95e7-f5f2db242c45"><td id="Yqk&lt;" class="" style="width:168px">9.</td><td id=";UHV" class="" style="width:168px"><strong>Web Stories</strong></td><td id="n?}{" class="" style="width:168px"></td><td id="&lt;hn`" class="" style="width:168px">30 Jun’24</td><td id="wcqc" class="" style="width:168px">P2</td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-8196-8086-e8917e625eeb"><td id="Yqk&lt;" class="" style="width:168px">10.</td><td id=";UHV" class="" style="width:168px"><strong>LVL Implementation (Appsflyer)</strong></td><td id="n?}{" class="" style="width:168px">Verification of Google Play Installs with Appsflyer to avoid fraud data.<br/><a href="https://support.appsflyer.com/hc/en-us/articles/17329535522961-Setting-up-the-Google-License-Verification-Library-LVL#add-lvl">https://support.appsflyer.com/hc/en-us/articles/17329535522961-Setting-up-the-Google-License-Verification-Library-LVL#add-lvl</a></td><td id="&lt;hn`" class="" style="width:168px">30 Jun’24</td><td id="wcqc" class="" style="width:168px">P2</td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-81d1-96e9-c24ee9836f83"><td id="Yqk&lt;" class="" style="width:168px">11.</td><td id=";UHV" class="" style="width:168px"><strong>Brand Marketer Pages<br/></strong></td><td id="n?}{" class="" style="width:168px">Improving interlinking structure on website through brand pages.<br/><em>1mg Traffic Volumes: 1,36,969</em></td><td id="&lt;hn`" class="" style="width:168px">15 Jul’24</td><td id="wcqc" class="" style="width:168px">P3</td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-8108-8ead-c093395de7fa"><td id="Yqk&lt;" class="" style="width:168px">12.</td><td id=";UHV" class="" style="width:168px"><strong>Parent Category Page (Website Architecture)</strong></td><td id="n?}{" class="" style="width:168px"></td><td id="&lt;hn`" class="" style="width:168px">20 Jul’24</td><td id="wcqc" class="" style="width:168px">P3</td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-81ec-acd9-c89b91fcf532"><td id="Yqk&lt;" class="" style="width:168px">13.</td><td id=";UHV" class="" style="width:168px"><strong>About Us Page (EEAT)</strong></td><td id="n?}{" class="" style="width:168px"></td><td id="&lt;hn`" class="" style="width:168px">20 Jul’24</td><td id="wcqc" class="" style="width:168px">P3</td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-813d-84b1-e6673d02a5b2"><td id="Yqk&lt;" class="" style="width:168px">14.</td><td id=";UHV" class="" style="width:168px"><strong>Vernacular Content (PD + Blog Pages)</strong></td><td id="n?}{" class="" style="width:168px">Hindi Content for Top 20K PDP Pages.<br/><em>1mg Traffic Volumes: 29,41,660 (~10% of Total Traffic)</em></td><td id="&lt;hn`" class="" style="width:168px">30 Jul’24</td><td id="wcqc" class="" style="width:168px">P3</td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-8199-a93c-dc35894d8b75"><td id="Yqk&lt;" class="" style="width:168px">15.</td><td id=";UHV" class="" style="width:168px"><strong>Out-of-Stock Handling for High-Ranking Pages</strong></td><td id="n?}{" class="" style="width:168px">Products to be in Stock for top 10-15K pages to maintain rankings and avoid traffic loss. Reporting system to be created to alert if any of those products go OOS.</td><td id="&lt;hn`" class="" style="width:168px">10 Aug’24</td><td id="wcqc" class="" style="width:168px">P4</td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-818f-81ce-f020b8a83266"><td id="Yqk&lt;" class="" style="width:168px">16.</td><td id=";UHV" class="" style="width:168px"><strong>Conversion Rate Optimization</strong></td><td id="n?}{" class="" style="width:168px">0% conversions currently from blog/salt pages where monthly traffic is around 80K/ month.<br/><em>(Overall Conversion goals to be achieved)</em></td><td id="&lt;hn`" class="" style="width:168px">Initiation by Mid Jun’24</td><td id="wcqc" class="" style="width:168px">P4</td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><h3 id="33614e83-d7d5-81f0-80d9-c932ea690471" class="">Initiative Impact</h3></div><div style="display:contents" dir="ltr"><table id="33614e83-d7d5-8101-b616-e75c395acc4d" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-81ee-8d20-f31ab1157971"><th id="vCmD" class="simple-table-header-color simple-table-header" style="width:134.98959350585938px"></th><th id="QszN" class="simple-table-header-color simple-table-header" style="width:78.09375px"><strong>Mar&#x27;24</strong></th><th id="Gwpl" class="simple-table-header-color simple-table-header" style="width:75.92708587646484px"><strong>Apr&#x27;24</strong></th><th id="TAE}" class="simple-table-header-color simple-table-header" style="width:76.20833587646484px"><strong>May&#x27;24</strong></th><th id="Zo{B" class="simple-table-header-color simple-table-header" style="width:78.32292175292969px"><strong>Jun&#x27;24</strong></th><th id="Gy\I" class="simple-table-header-color simple-table-header" style="width:77.79167175292969px"><strong>Jul&#x27;24</strong></th><th id="qHmP" class="simple-table-header-color simple-table-header" style="width:75.4375px"><strong>Aug&#x27;24</strong></th><th id="{?\Q" class="simple-table-header-color simple-table-header" style="width:75.92708587646484px"><strong>Sep&#x27;24</strong></th><th id="]fgF" class="simple-table-header-color simple-table-header" style="width:79.63542175292969px"><strong>Oct&#x27;24</strong></th><th id="cT}Y" class="simple-table-header-color simple-table-header" style="width:80.54167175292969px"><strong>Nov&#x27;24</strong></th><th id="tObl" class="simple-table-header-color simple-table-header" style="width:80.48958587646484px"><strong>Dec&#x27;24</strong></th><th id="{mGq" class="simple-table-header-color simple-table-header" style="width:78.65625px"><strong>Jan&#x27;25</strong></th><th id="Zno[" class="simple-table-header-color simple-table-header" style="width:79.44792175292969px"><strong>Feb&#x27;25</strong></th><th id="WCq&lt;" class="simple-table-header-color simple-table-header" style="width:80.20833587646484px"><strong>Mar&#x27;25</strong></th><th id="E@wH" class="simple-table-header-color simple-table-header" style="width:78.40625px"><strong>Apr&#x27;25</strong></th><th id="];Td" class="simple-table-header-color simple-table-header" style="width:75.35417175292969px"><strong>May&#x27;25</strong></th><th id="YXdy" class="simple-table-header-color simple-table-header" style="width:78.36458587646484px"><strong>Jun&#x27;24</strong></th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-8120-8998-e7172875203f"><th id="vCmD" class="block-color-blue_background simple-table-header" style="width:134.98959350585938px"><strong>Product</strong></th><td id="QszN" class="block-color-blue_background" style="width:78.09375px"><strong>970,340</strong></td><td id="Gwpl" class="block-color-blue_background" style="width:75.92708587646484px"><strong>1,029,531</strong></td><td id="TAE}" class="block-color-blue_background" style="width:76.20833587646484px"><strong>1,155,133</strong></td><td id="Zo{B" class="block-color-blue_background" style="width:78.32292175292969px"><strong>1,452,003</strong></td><td id="Gy\I" class="block-color-blue_background" style="width:77.79167175292969px"><strong>1,588,491</strong></td><td id="qHmP" class="block-color-blue_background" style="width:75.4375px"><strong>1,715,570</strong></td><td id="{?\Q" class="block-color-blue_background" style="width:75.92708587646484px"><strong>1,852,816</strong></td><td id="]fgF" class="block-color-blue_background" style="width:79.63542175292969px"><strong>1,995,483</strong></td><td id="cT}Y" class="block-color-blue_background" style="width:80.54167175292969px"><strong>2,159,112</strong></td><td id="tObl" class="block-color-blue_background" style="width:80.48958587646484px"><strong>2,340,478</strong></td><td id="{mGq" class="block-color-blue_background" style="width:78.65625px"><strong>2,527,716</strong></td><td id="Zno[" class="block-color-blue_background" style="width:79.44792175292969px"><strong>2,777,960</strong></td><td id="WCq&lt;" class="block-color-blue_background" style="width:80.20833587646484px"><strong>3,083,536</strong></td><td id="E@wH" class="block-color-blue_background" style="width:78.40625px"><strong>3,391,889</strong></td><td id="];Td" class="block-color-blue_background" style="width:75.35417175292969px"><strong>3,717,510</strong></td><td id="YXdy" class="block-color-blue_background" style="width:78.36458587646484px"><strong>3,921,974</strong></td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-8150-aef6-d6061acfa7d1"><th id="vCmD" class="simple-table-header-color simple-table-header" style="width:134.98959350585938px">DRR</th><td id="QszN" class="" style="width:78.09375px">31,301</td><td id="Gwpl" class="" style="width:75.92708587646484px">34,318</td><td id="TAE}" class="" style="width:76.20833587646484px">37,262</td><td id="Zo{B" class="" style="width:78.32292175292969px">48,400</td><td id="Gy\I" class="" style="width:77.79167175292969px">51,242</td><td id="qHmP" class="" style="width:75.4375px">55,341</td><td id="{?\Q" class="" style="width:75.92708587646484px">61,761</td><td id="]fgF" class="" style="width:79.63542175292969px">64,370</td><td id="cT}Y" class="" style="width:80.54167175292969px">71,970</td><td id="tObl" class="" style="width:80.48958587646484px">75,499</td><td id="{mGq" class="" style="width:78.65625px">81,539</td><td id="Zno[" class="" style="width:79.44792175292969px">99,213</td><td id="WCq&lt;" class="" style="width:80.20833587646484px">99,469</td><td id="E@wH" class="" style="width:78.40625px">109,416</td><td id="];Td" class="" style="width:75.35417175292969px">119,920</td><td id="YXdy" class="" style="width:78.36458587646484px">126,515</td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-819f-acc8-e4fd598fa4a4"><th id="vCmD" class="simple-table-header-color simple-table-header" style="width:134.98959350585938px">Growth %</th><td id="QszN" class="" style="width:78.09375px">-</td><td id="Gwpl" class="" style="width:75.92708587646484px">6.1%</td><td id="TAE}" class="" style="width:76.20833587646484px">12.2%</td><td id="Zo{B" class="" style="width:78.32292175292969px">25.7%</td><td id="Gy\I" class="" style="width:77.79167175292969px">9.4%</td><td id="qHmP" class="" style="width:75.4375px">8.0%</td><td id="{?\Q" class="" style="width:75.92708587646484px">8.0%</td><td id="]fgF" class="" style="width:79.63542175292969px">7.7%</td><td id="cT}Y" class="" style="width:80.54167175292969px">8.2%</td><td id="tObl" class="" style="width:80.48958587646484px">8.4%</td><td id="{mGq" class="" style="width:78.65625px">8.0%</td><td id="Zno[" class="" style="width:79.44792175292969px">9.9%</td><td id="WCq&lt;" class="" style="width:80.20833587646484px">11.0%</td><td id="E@wH" class="" style="width:78.40625px">10.0%</td><td id="];Td" class="" style="width:75.35417175292969px">9.6%</td><td id="YXdy" class="" style="width:78.36458587646484px">5.5%</td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-81f8-a054-cff1a133bb17"><th id="vCmD" class="block-color-blue_background simple-table-header" style="width:134.98959350585938px"><strong>40K OTC Products</strong></th><td id="QszN" class="block-color-blue_background" style="width:78.09375px"><strong>-</strong></td><td id="Gwpl" class="block-color-blue_background" style="width:75.92708587646484px"><strong>-</strong></td><td id="TAE}" class="block-color-blue_background" style="width:76.20833587646484px"><strong>-</strong></td><td id="Zo{B" class="block-color-blue_background" style="width:78.32292175292969px"><strong>-</strong></td><td id="Gy\I" class="block-color-blue_background" style="width:77.79167175292969px"><strong>20,000</strong></td><td id="qHmP" class="block-color-blue_background" style="width:75.4375px"><strong>48,000</strong></td><td id="{?\Q" class="block-color-blue_background" style="width:75.92708587646484px"><strong>78,240</strong></td><td id="]fgF" class="block-color-blue_background" style="width:79.63542175292969px"><strong>116,578</strong></td><td id="cT}Y" class="block-color-blue_background" style="width:80.54167175292969px"><strong>157,380</strong></td><td id="tObl" class="block-color-blue_background" style="width:80.48958587646484px"><strong>196,725</strong></td><td id="{mGq" class="block-color-blue_background" style="width:78.65625px"><strong>238,037</strong></td><td id="Zno[" class="block-color-blue_background" style="width:79.44792175292969px"><strong>261,841</strong></td><td id="WCq&lt;" class="block-color-blue_background" style="width:80.20833587646484px"><strong>290,643</strong></td><td id="E@wH" class="block-color-blue_background" style="width:78.40625px"><strong>331,333</strong></td><td id="];Td" class="block-color-blue_background" style="width:75.35417175292969px"><strong>379,045</strong></td><td id="YXdy" class="block-color-blue_background" style="width:78.36458587646484px"><strong>421,119</strong></td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-81f1-8389-eebd5f72cc9f"><th id="vCmD" class="simple-table-header-color simple-table-header" style="width:134.98959350585938px">DRR</th><td id="QszN" class="" style="width:78.09375px">-</td><td id="Gwpl" class="" style="width:75.92708587646484px">-</td><td id="TAE}" class="" style="width:76.20833587646484px">-</td><td id="Zo{B" class="" style="width:78.32292175292969px">-</td><td id="Gy\I" class="" style="width:77.79167175292969px">645</td><td id="qHmP" class="" style="width:75.4375px">1,548</td><td id="{?\Q" class="" style="width:75.92708587646484px">2,524</td><td id="]fgF" class="" style="width:79.63542175292969px">3,761</td><td id="cT}Y" class="" style="width:80.54167175292969px">5,077</td><td id="tObl" class="" style="width:80.48958587646484px">6,346</td><td id="{mGq" class="" style="width:78.65625px">7,679</td><td id="Zno[" class="" style="width:79.44792175292969px">8,446</td><td id="WCq&lt;" class="" style="width:80.20833587646484px">9,376</td><td id="E@wH" class="" style="width:78.40625px">10,688</td><td id="];Td" class="" style="width:75.35417175292969px">12,227</td><td id="YXdy" class="" style="width:78.36458587646484px">13,584</td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-817f-bd55-e56eac01b85c"><th id="vCmD" class="simple-table-header-color simple-table-header" style="width:134.98959350585938px"><strong>Growth %</strong></th><td id="QszN" class="" style="width:78.09375px">-</td><td id="Gwpl" class="" style="width:75.92708587646484px">-</td><td id="TAE}" class="" style="width:76.20833587646484px">-</td><td id="Zo{B" class="" style="width:78.32292175292969px">-</td><td id="Gy\I" class="" style="width:77.79167175292969px">-</td><td id="qHmP" class="" style="width:75.4375px">140.00%</td><td id="{?\Q" class="" style="width:75.92708587646484px">63.00%</td><td id="]fgF" class="" style="width:79.63542175292969px">49.00%</td><td id="cT}Y" class="" style="width:80.54167175292969px">35.00%</td><td id="tObl" class="" style="width:80.48958587646484px">25.00%</td><td id="{mGq" class="" style="width:78.65625px">21.00%</td><td id="Zno[" class="" style="width:79.44792175292969px">10.00%</td><td id="WCq&lt;" class="" style="width:80.20833587646484px">11.00%</td><td id="E@wH" class="" style="width:78.40625px">14.00%</td><td id="];Td" class="" style="width:75.35417175292969px">14.40%</td><td id="YXdy" class="" style="width:78.36458587646484px">11.10%</td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-81fd-ab59-f3690223d4a5"><th id="vCmD" class="block-color-blue_background simple-table-header" style="width:134.98959350585938px"><strong>Ayurveda Ingredients Pages</strong></th><td id="QszN" class="block-color-blue_background" style="width:78.09375px"><strong>-</strong></td><td id="Gwpl" class="block-color-blue_background" style="width:75.92708587646484px"><strong>-</strong></td><td id="TAE}" class="block-color-blue_background" style="width:76.20833587646484px"><strong>-</strong></td><td id="Zo{B" class="block-color-blue_background" style="width:78.32292175292969px"><strong>-</strong></td><td id="Gy\I" class="block-color-blue_background" style="width:77.79167175292969px"><strong>200</strong></td><td id="qHmP" class="block-color-blue_background" style="width:75.4375px"><strong>280</strong></td><td id="{?\Q" class="block-color-blue_background" style="width:75.92708587646484px"><strong>1,092</strong></td><td id="]fgF" class="block-color-blue_background" style="width:79.63542175292969px"><strong>2,730</strong></td><td id="cT}Y" class="block-color-blue_background" style="width:80.54167175292969px"><strong>6,416</strong></td><td id="tObl" class="block-color-blue_background" style="width:80.48958587646484px"><strong>12,510</strong></td><td id="{mGq" class="block-color-blue_background" style="width:78.65625px"><strong>23,144</strong></td><td id="Zno[" class="block-color-blue_background" style="width:79.44792175292969px"><strong>39,345</strong></td><td id="WCq&lt;" class="block-color-blue_background" style="width:80.20833587646484px"><strong>64,919</strong></td><td id="E@wH" class="block-color-blue_background" style="width:78.40625px"><strong>87,640</strong></td><td id="];Td" class="block-color-blue_background" style="width:75.35417175292969px"><strong>113,056</strong></td><td id="YXdy" class="block-color-blue_background" style="width:78.36458587646484px"><strong>135,667</strong></td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-81aa-90c8-ca3e50d126ce"><th id="vCmD" class="simple-table-header-color simple-table-header" style="width:134.98959350585938px"><strong>DRR</strong></th><td id="QszN" class="" style="width:78.09375px">-</td><td id="Gwpl" class="" style="width:75.92708587646484px">-</td><td id="TAE}" class="" style="width:76.20833587646484px">-</td><td id="Zo{B" class="" style="width:78.32292175292969px">-</td><td id="Gy\I" class="" style="width:77.79167175292969px">6</td><td id="qHmP" class="" style="width:75.4375px">9</td><td id="{?\Q" class="" style="width:75.92708587646484px">35</td><td id="]fgF" class="" style="width:79.63542175292969px">88</td><td id="cT}Y" class="" style="width:80.54167175292969px">207</td><td id="tObl" class="" style="width:80.48958587646484px">404</td><td id="{mGq" class="" style="width:78.65625px">747</td><td id="Zno[" class="" style="width:79.44792175292969px">1,269</td><td id="WCq&lt;" class="" style="width:80.20833587646484px">2,094</td><td id="E@wH" class="" style="width:78.40625px">2,827</td><td id="];Td" class="" style="width:75.35417175292969px">3,647</td><td id="YXdy" class="" style="width:78.36458587646484px">4,376</td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-81f5-8446-d4f15d9f7f63"><th id="vCmD" class="simple-table-header-color simple-table-header" style="width:134.98959350585938px"><strong>Growth %</strong></th><td id="QszN" class="" style="width:78.09375px">-</td><td id="Gwpl" class="" style="width:75.92708587646484px">-</td><td id="TAE}" class="" style="width:76.20833587646484px">-</td><td id="Zo{B" class="" style="width:78.32292175292969px">-</td><td id="Gy\I" class="" style="width:77.79167175292969px">-</td><td id="qHmP" class="" style="width:75.4375px">40%</td><td id="{?\Q" class="" style="width:75.92708587646484px">290%</td><td id="]fgF" class="" style="width:79.63542175292969px">150%</td><td id="cT}Y" class="" style="width:80.54167175292969px">135%</td><td id="tObl" class="" style="width:80.48958587646484px">95%</td><td id="{mGq" class="" style="width:78.65625px">85%</td><td id="Zno[" class="" style="width:79.44792175292969px">70%</td><td id="WCq&lt;" class="" style="width:80.20833587646484px">65%</td><td id="E@wH" class="" style="width:78.40625px">35%</td><td id="];Td" class="" style="width:75.35417175292969px">29%</td><td id="YXdy" class="" style="width:78.36458587646484px">20%</td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-8176-a22e-e90c079eb982"><th id="vCmD" class="block-color-blue_background simple-table-header" style="width:134.98959350585938px"><strong>Blog</strong></th><td id="QszN" class="block-color-blue_background" style="width:78.09375px"><strong>69,523</strong></td><td id="Gwpl" class="block-color-blue_background" style="width:75.92708587646484px"><strong>70,913</strong></td><td id="TAE}" class="block-color-blue_background" style="width:76.20833587646484px"><strong>85,309</strong></td><td id="Zo{B" class="block-color-blue_background" style="width:78.32292175292969px"><strong>106,636</strong></td><td id="Gy\I" class="block-color-blue_background" style="width:77.79167175292969px"><strong>122,632</strong></td><td id="qHmP" class="block-color-blue_background" style="width:75.4375px"><strong>141,026</strong></td><td id="{?\Q" class="block-color-blue_background" style="width:75.92708587646484px"><strong>160,770</strong></td><td id="]fgF" class="block-color-blue_background" style="width:79.63542175292969px"><strong>180,062</strong></td><td id="cT}Y" class="block-color-blue_background" style="width:80.54167175292969px"><strong>207,072</strong></td><td id="tObl" class="block-color-blue_background" style="width:80.48958587646484px"><strong>238,132</strong></td><td id="{mGq" class="block-color-blue_background" style="width:78.65625px"><strong>280,996</strong></td><td id="Zno[" class="block-color-blue_background" style="width:79.44792175292969px"><strong>323,146</strong></td><td id="WCq&lt;" class="block-color-blue_background" style="width:80.20833587646484px"><strong>365,155</strong></td><td id="E@wH" class="block-color-blue_background" style="width:78.40625px"><strong>430,882</strong></td><td id="];Td" class="block-color-blue_background" style="width:75.35417175292969px"><strong>467,077</strong></td><td id="YXdy" class="block-color-blue_background" style="width:78.36458587646484px"><strong>504,443</strong></td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-815d-9e92-dbb1c651d68a"><th id="vCmD" class="simple-table-header-color simple-table-header" style="width:134.98959350585938px"><strong>Growth %</strong></th><td id="QszN" class="" style="width:78.09375px">-%</td><td id="Gwpl" class="" style="width:75.92708587646484px">2.0%</td><td id="TAE}" class="" style="width:76.20833587646484px">20.3%</td><td id="Zo{B" class="" style="width:78.32292175292969px">25.0%</td><td id="Gy\I" class="" style="width:77.79167175292969px">15.0%</td><td id="qHmP" class="" style="width:75.4375px">15.0%</td><td id="{?\Q" class="" style="width:75.92708587646484px">14.0%</td><td id="]fgF" class="" style="width:79.63542175292969px">12.0%</td><td id="cT}Y" class="" style="width:80.54167175292969px">15.0%</td><td id="tObl" class="" style="width:80.48958587646484px">15.0%</td><td id="{mGq" class="" style="width:78.65625px">18.0%</td><td id="Zno[" class="" style="width:79.44792175292969px">15.0%</td><td id="WCq&lt;" class="" style="width:80.20833587646484px">13.0%</td><td id="E@wH" class="" style="width:78.40625px">18.0%</td><td id="];Td" class="" style="width:75.35417175292969px">8.4%</td><td id="YXdy" class="" style="width:78.36458587646484px">8.0%</td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-814d-9728-f08ead8dc969"><th id="vCmD" class="block-color-blue_background simple-table-header" style="width:134.98959350585938px"><strong>Salts</strong></th><td id="QszN" class="block-color-blue_background" style="width:78.09375px"><strong>27,539</strong></td><td id="Gwpl" class="block-color-blue_background" style="width:75.92708587646484px"><strong>29,467</strong></td><td id="TAE}" class="block-color-blue_background" style="width:76.20833587646484px"><strong>33,798</strong></td><td id="Zo{B" class="block-color-blue_background" style="width:78.32292175292969px"><strong>46,304</strong></td><td id="Gy\I" class="block-color-blue_background" style="width:77.79167175292969px"><strong>54,175</strong></td><td id="qHmP" class="block-color-blue_background" style="width:75.4375px"><strong>63,385</strong></td><td id="{?\Q" class="block-color-blue_background" style="width:75.92708587646484px"><strong>74,161</strong></td><td id="]fgF" class="block-color-blue_background" style="width:79.63542175292969px"><strong>86,026</strong></td><td id="cT}Y" class="block-color-blue_background" style="width:80.54167175292969px"><strong>101,167</strong></td><td id="tObl" class="block-color-blue_background" style="width:80.48958587646484px"><strong>123,727</strong></td><td id="{mGq" class="block-color-blue_background" style="width:78.65625px"><strong>152,432</strong></td><td id="Zno[" class="block-color-blue_background" style="width:79.44792175292969px"><strong>194,198</strong></td><td id="WCq&lt;" class="block-color-blue_background" style="width:80.20833587646484px"><strong>233,038</strong></td><td id="E@wH" class="block-color-blue_background" style="width:78.40625px"><strong>277,315</strong></td><td id="];Td" class="block-color-blue_background" style="width:75.35417175292969px"><strong>336,439</strong></td><td id="YXdy" class="block-color-blue_background" style="width:78.36458587646484px"><strong>395,988</strong></td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-810c-9e94-c6cb0dd34024"><th id="vCmD" class="simple-table-header-color simple-table-header" style="width:134.98959350585938px"><strong>Growth %</strong></th><td id="QszN" class="" style="width:78.09375px">-%</td><td id="Gwpl" class="" style="width:75.92708587646484px">7.0%</td><td id="TAE}" class="" style="width:76.20833587646484px">14.7%</td><td id="Zo{B" class="" style="width:78.32292175292969px">37.0%</td><td id="Gy\I" class="" style="width:77.79167175292969px">17.0%</td><td id="qHmP" class="" style="width:75.4375px">17.0%</td><td id="{?\Q" class="" style="width:75.92708587646484px">17.0%</td><td id="]fgF" class="" style="width:79.63542175292969px">16.0%</td><td id="cT}Y" class="" style="width:80.54167175292969px">17.6%</td><td id="tObl" class="" style="width:80.48958587646484px">22.3%</td><td id="{mGq" class="" style="width:78.65625px">23.2%</td><td id="Zno[" class="" style="width:79.44792175292969px">27.4%</td><td id="WCq&lt;" class="" style="width:80.20833587646484px">20.0%</td><td id="E@wH" class="" style="width:78.40625px">19.0%</td><td id="];Td" class="" style="width:75.35417175292969px">21.3%</td><td id="YXdy" class="" style="width:78.36458587646484px">17.7%</td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-8172-bbb6-d2fe0279ed8f"><th id="vCmD" class="block-color-blue_background simple-table-header" style="width:134.98959350585938px"><strong>Disease</strong></th><td id="QszN" class="block-color-blue_background" style="width:78.09375px"><strong>0</strong></td><td id="Gwpl" class="block-color-blue_background" style="width:75.92708587646484px"><strong>0</strong></td><td id="TAE}" class="block-color-blue_background" style="width:76.20833587646484px"><strong>-</strong></td><td id="Zo{B" class="block-color-blue_background" style="width:78.32292175292969px"><strong>604</strong></td><td id="Gy\I" class="block-color-blue_background" style="width:77.79167175292969px"><strong>846</strong></td><td id="qHmP" class="block-color-blue_background" style="width:75.4375px"><strong>1,218</strong></td><td id="{?\Q" class="block-color-blue_background" style="width:75.92708587646484px"><strong>1,839</strong></td><td id="]fgF" class="block-color-blue_background" style="width:79.63542175292969px"><strong>3,034</strong></td><td id="cT}Y" class="block-color-blue_background" style="width:80.54167175292969px"><strong>4,884</strong></td><td id="tObl" class="block-color-blue_background" style="width:80.48958587646484px"><strong>7,082</strong></td><td id="{mGq" class="block-color-blue_background" style="width:78.65625px"><strong>10,765</strong></td><td id="Zno[" class="block-color-blue_background" style="width:79.44792175292969px"><strong>16,040</strong></td><td id="WCq&lt;" class="block-color-blue_background" style="width:80.20833587646484px"><strong>22,777</strong></td><td id="E@wH" class="block-color-blue_background" style="width:78.40625px"><strong>33,482</strong></td><td id="];Td" class="block-color-blue_background" style="width:75.35417175292969px"><strong>49,219</strong></td><td id="YXdy" class="block-color-blue_background" style="width:78.36458587646484px"><strong>73,337</strong></td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-8193-82f2-d2c26558c016"><th id="vCmD" class="simple-table-header-color simple-table-header" style="width:134.98959350585938px"><strong>Growth %</strong></th><td id="QszN" class="" style="width:78.09375px">-%</td><td id="Gwpl" class="" style="width:75.92708587646484px">-%</td><td id="TAE}" class="" style="width:76.20833587646484px">-</td><td id="Zo{B" class="" style="width:78.32292175292969px">-</td><td id="Gy\I" class="" style="width:77.79167175292969px">40.0%</td><td id="qHmP" class="" style="width:75.4375px">44.0%</td><td id="{?\Q" class="" style="width:75.92708587646484px">51.0%</td><td id="]fgF" class="" style="width:79.63542175292969px">65.0%</td><td id="cT}Y" class="" style="width:80.54167175292969px">61.0%</td><td id="tObl" class="" style="width:80.48958587646484px">45.0%</td><td id="{mGq" class="" style="width:78.65625px">52.0%</td><td id="Zno[" class="" style="width:79.44792175292969px">49.0%</td><td id="WCq&lt;" class="" style="width:80.20833587646484px">42.0%</td><td id="E@wH" class="" style="width:78.40625px">47.0%</td><td id="];Td" class="" style="width:75.35417175292969px">47.0%</td><td id="YXdy" class="" style="width:78.36458587646484px">49.0%</td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-81c7-a0bd-dd0caeb63c10"><th id="vCmD" class="block-color-blue_background simple-table-header" style="width:134.98959350585938px"><strong>Web-story</strong></th><td id="QszN" class="block-color-blue_background" style="width:78.09375px"><strong>0</strong></td><td id="Gwpl" class="block-color-blue_background" style="width:75.92708587646484px"><strong>0</strong></td><td id="TAE}" class="block-color-blue_background" style="width:76.20833587646484px"><strong>-</strong></td><td id="Zo{B" class="block-color-blue_background" style="width:78.32292175292969px"><strong>734</strong></td><td id="Gy\I" class="block-color-blue_background" style="width:77.79167175292969px"><strong>1,064</strong></td><td id="qHmP" class="block-color-blue_background" style="width:75.4375px"><strong>1,596</strong></td><td id="{?\Q" class="block-color-blue_background" style="width:75.92708587646484px"><strong>2,474</strong></td><td id="]fgF" class="block-color-blue_background" style="width:79.63542175292969px"><strong>3,959</strong></td><td id="cT}Y" class="block-color-blue_background" style="width:80.54167175292969px"><strong>5,978</strong></td><td id="tObl" class="block-color-blue_background" style="width:80.48958587646484px"><strong>8,549</strong></td><td id="{mGq" class="block-color-blue_background" style="width:78.65625px"><strong>12,824</strong></td><td id="Zno[" class="block-color-blue_background" style="width:79.44792175292969px"><strong>19,364</strong></td><td id="WCq&lt;" class="block-color-blue_background" style="width:80.20833587646484px"><strong>31,176</strong></td><td id="E@wH" class="block-color-blue_background" style="width:78.40625px"><strong>41,276</strong></td><td id="];Td" class="block-color-blue_background" style="width:75.35417175292969px"><strong>50,770</strong></td><td id="YXdy" class="block-color-blue_background" style="width:78.36458587646484px"><strong>59,909</strong></td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-81d2-be5d-d7ea72957677"><th id="vCmD" class="simple-table-header-color simple-table-header" style="width:134.98959350585938px"><strong>Growth %</strong></th><td id="QszN" class="" style="width:78.09375px">-</td><td id="Gwpl" class="" style="width:75.92708587646484px">-</td><td id="TAE}" class="" style="width:76.20833587646484px">-</td><td id="Zo{B" class="" style="width:78.32292175292969px">-</td><td id="Gy\I" class="" style="width:77.79167175292969px">45.0%</td><td id="qHmP" class="" style="width:75.4375px">50.0%</td><td id="{?\Q" class="" style="width:75.92708587646484px">55.0%</td><td id="]fgF" class="" style="width:79.63542175292969px">60.0%</td><td id="cT}Y" class="" style="width:80.54167175292969px">51.0%</td><td id="tObl" class="" style="width:80.48958587646484px">43.0%</td><td id="{mGq" class="" style="width:78.65625px">50.0%</td><td id="Zno[" class="" style="width:79.44792175292969px">51.0%</td><td id="WCq&lt;" class="" style="width:80.20833587646484px">61.0%</td><td id="E@wH" class="" style="width:78.40625px">32.4%</td><td id="];Td" class="" style="width:75.35417175292969px">23.0%</td><td id="YXdy" class="" style="width:78.36458587646484px">18.0%</td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-81e6-bdef-eef78a165fd0"><th id="vCmD" class="block-color-teal_background simple-table-header" style="width:134.98959350585938px"><strong>Total</strong></th><td id="QszN" class="block-color-teal_background" style="width:78.09375px"><strong>1,067,402</strong></td><td id="Gwpl" class="block-color-teal_background" style="width:75.92708587646484px"><strong>1,129,911</strong></td><td id="TAE}" class="block-color-teal_background" style="width:76.20833587646484px"><strong>1,274,241</strong></td><td id="Zo{B" class="block-color-teal_background" style="width:78.32292175292969px"><strong>1,606,281</strong></td><td id="Gy\I" class="block-color-teal_background" style="width:77.79167175292969px"><strong>1,787,408</strong></td><td id="qHmP" class="block-color-teal_background" style="width:75.4375px"><strong>1,971,076</strong></td><td id="{?\Q" class="block-color-teal_background" style="width:75.92708587646484px"><strong>2,171,392</strong></td><td id="]fgF" class="block-color-teal_background" style="width:79.63542175292969px"><strong>2,387,872</strong></td><td id="cT}Y" class="block-color-teal_background" style="width:80.54167175292969px"><strong>2,642,009</strong></td><td id="tObl" class="block-color-teal_background" style="width:80.48958587646484px"><strong>2,927,204</strong></td><td id="{mGq" class="block-color-teal_background" style="width:78.65625px"><strong>3,245,914</strong></td><td id="Zno[" class="block-color-teal_background" style="width:79.44792175292969px"><strong>3,631,893</strong></td><td id="WCq&lt;" class="block-color-teal_background" style="width:80.20833587646484px"><strong>4,091,243</strong></td><td id="E@wH" class="block-color-teal_background" style="width:78.40625px"><strong>4,593,819</strong></td><td id="];Td" class="block-color-teal_background" style="width:75.35417175292969px"><strong>5,113,116</strong></td><td id="YXdy" class="block-color-teal_background" style="width:78.36458587646484px"><strong>5,512,436</strong></td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-814c-af3d-fe5f7549d5a5"><th id="vCmD" class="simple-table-header-color simple-table-header" style="width:134.98959350585938px"><strong>DRR</strong></th><td id="QszN" class="" style="width:78.09375px">35,580</td><td id="Gwpl" class="" style="width:75.92708587646484px">37,664</td><td id="TAE}" class="" style="width:76.20833587646484px">42,475</td><td id="Zo{B" class="" style="width:78.32292175292969px">53,543</td><td id="Gy\I" class="" style="width:77.79167175292969px">59,580</td><td id="qHmP" class="" style="width:75.4375px">65,703</td><td id="{?\Q" class="" style="width:75.92708587646484px">72,380</td><td id="]fgF" class="" style="width:79.63542175292969px">79,596</td><td id="cT}Y" class="" style="width:80.54167175292969px">88,067</td><td id="tObl" class="" style="width:80.48958587646484px">97,573</td><td id="{mGq" class="" style="width:78.65625px">108,197</td><td id="Zno[" class="" style="width:79.44792175292969px">121,063</td><td id="WCq&lt;" class="" style="width:80.20833587646484px">136375</td><td id="E@wH" class="" style="width:78.40625px">153127</td><td id="];Td" class="" style="width:75.35417175292969px">170437</td><td id="YXdy" class="" style="width:78.36458587646484px">183748</td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-813b-b395-d5a714a5f399"><th id="vCmD" class="simple-table-header-color simple-table-header" style="width:134.98959350585938px"><strong>Traffic Growth (In Num)</strong></th><td id="QszN" class="" style="width:78.09375px"></td><td id="Gwpl" class="" style="width:75.92708587646484px">62,509</td><td id="TAE}" class="" style="width:76.20833587646484px">144,330</td><td id="Zo{B" class="" style="width:78.32292175292969px">332,040</td><td id="Gy\I" class="" style="width:77.79167175292969px">181,127</td><td id="qHmP" class="" style="width:75.4375px">183,668</td><td id="{?\Q" class="" style="width:75.92708587646484px">200,316</td><td id="]fgF" class="" style="width:79.63542175292969px">216,480</td><td id="cT}Y" class="" style="width:80.54167175292969px">254,137</td><td id="tObl" class="" style="width:80.48958587646484px">285,195</td><td id="{mGq" class="" style="width:78.65625px">318,710</td><td id="Zno[" class="" style="width:79.44792175292969px">385,979</td><td id="WCq&lt;" class="" style="width:80.20833587646484px">459,349</td><td id="E@wH" class="" style="width:78.40625px">502,576</td><td id="];Td" class="" style="width:75.35417175292969px">519,297</td><td id="YXdy" class="" style="width:78.36458587646484px">399,320</td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-8130-b4d1-dbb26f136746"><th id="vCmD" class="simple-table-header-color simple-table-header" style="width:134.98959350585938px"><strong>Traffic Growth (In %age)</strong></th><td id="QszN" class="" style="width:78.09375px"></td><td id="Gwpl" class="" style="width:75.92708587646484px">5.856%</td><td id="TAE}" class="" style="width:76.20833587646484px">12.774%</td><td id="Zo{B" class="" style="width:78.32292175292969px">26.058%</td><td id="Gy\I" class="" style="width:77.79167175292969px">11.276%</td><td id="qHmP" class="" style="width:75.4375px">10.276%</td><td id="{?\Q" class="" style="width:75.92708587646484px">10.163%</td><td id="]fgF" class="" style="width:79.63542175292969px">9.970%</td><td id="cT}Y" class="" style="width:80.54167175292969px">10.643%</td><td id="tObl" class="" style="width:80.48958587646484px">10.795%</td><td id="{mGq" class="" style="width:78.65625px">10.888%</td><td id="Zno[" class="" style="width:79.44792175292969px">11.891%</td><td id="WCq&lt;" class="" style="width:80.20833587646484px">12.648%</td><td id="E@wH" class="" style="width:78.40625px">12.284%</td><td id="];Td" class="" style="width:75.35417175292969px">11.304%</td><td id="YXdy" class="" style="width:78.36458587646484px">7.810%</td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><p id="33614e83-d7d5-8180-9249-fd3755cb089c" class="">
+</p></div><div style="display:contents" dir="auto"><h3 id="33614e83-d7d5-818e-a1bd-f7c13a61a3f8" class=""><strong>Conversion Rates/Revenue Planning</strong></h3></div><div style="display:contents" dir="auto"><p id="33614e83-d7d5-8113-b543-e72d43ce8b92" class=""><em>Current Click - OS: ~1.5% (Basis Traffic from GA and OS Numbers from Backend Customer Traffic Tracking).<br/></em><strong>To Achieve:</strong></p></div><div style="display:contents" dir="ltr"><table id="33614e83-d7d5-81d5-beef-dec9ac0a6755" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-81d0-bee3-cc590723adb8"><th id="Daa~" class="simple-table-header-color simple-table-header"><strong>Traffic - OS</strong></th><th id="LKyG" class="simple-table-header-color simple-table-header"><strong>Medicine/OTC</strong></th><th id="XcOE" class="simple-table-header-color simple-table-header"><strong>Blogs/Disease/Ayurveda</strong></th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-81ac-a3fc-c9d38e0c4314"><th id="Daa~" class="simple-table-header-color simple-table-header"><strong>Q1</strong></th><td id="LKyG" class="">1.7%</td><td id="XcOE" class="">0.0%</td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-81e5-a296-c4d590cb9d63"><th id="Daa~" class="simple-table-header-color simple-table-header"><strong>Q2</strong></th><td id="LKyG" class="">1.9%</td><td id="XcOE" class="">0.2%</td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-819d-85aa-d898d15f6a4a"><th id="Daa~" class="simple-table-header-color simple-table-header"><strong>Q3</strong></th><td id="LKyG" class="">2.1%</td><td id="XcOE" class="">0.5%</td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-81a3-8fef-c041dabc4539"><th id="Daa~" class="simple-table-header-color simple-table-header"><strong>Q4</strong></th><td id="LKyG" class="">2.3%</td><td id="XcOE" class="">0.7%</td></tr></div></tbody></table></div><div style="display:contents" dir="ltr"><table id="33614e83-d7d5-81b7-9753-e37ba84081f8" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-8191-8462-ec3c4367a99a"><th id="WW}[" class="simple-table-header-color simple-table-header" style="width:73px"></th><th id="ZS[F" class="simple-table-header-color simple-table-header" style="width:85.44792175292969px">Apr-24</th><th id="@|L_" class="simple-table-header-color simple-table-header" style="width:85.44792175292969px">May-24</th><th id="q&gt;bE" class="simple-table-header-color simple-table-header" style="width:85.44792175292969px">Jun-24</th><th id="NgId" class="simple-table-header-color simple-table-header" style="width:85.44792175292969px">Jul-24</th><th id="x:Gv" class="simple-table-header-color simple-table-header" style="width:85.44792175292969px">Aug-24</th><th id="MzYT" class="simple-table-header-color simple-table-header" style="width:85.44792175292969px">Sep-24</th><th id="SuBo" class="simple-table-header-color simple-table-header" style="width:85.44792175292969px">Oct-24</th><th id="JHeS" class="simple-table-header-color simple-table-header" style="width:85.44792175292969px">Nov-24</th><th id="S|&lt;?" class="simple-table-header-color simple-table-header" style="width:85.44792175292969px">Dec-24</th><th id="mk^e" class="simple-table-header-color simple-table-header" style="width:85.44792175292969px">Jan-25</th><th id="dKHO" class="simple-table-header-color simple-table-header" style="width:85.44792175292969px">Feb-25</th><th id="ow?z" class="simple-table-header-color simple-table-header" style="width:85.44792175292969px">Mar-25</th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-8118-9049-ebccfcae3a52"><th id="WW}[" class="simple-table-header-color simple-table-header" style="width:73px">OS</th><td id="ZS[F" class="" style="width:85.44792175292969px">14,592</td><td id="@|L_" class="" style="width:85.44792175292969px">16,468</td><td id="q&gt;bE" class="" style="width:85.44792175292969px">19,175</td><td id="NgId" class="" style="width:85.44792175292969px">23,699</td><td id="x:Gv" class="" style="width:85.44792175292969px">26,029</td><td id="MzYT" class="" style="width:85.44792175292969px">28,005</td><td id="SuBo" class="" style="width:85.44792175292969px">31,990</td><td id="JHeS" class="" style="width:85.44792175292969px">33,753</td><td id="S|&lt;?" class="" style="width:85.44792175292969px">35,510</td><td id="mk^e" class="" style="width:85.44792175292969px">35,830</td><td id="dKHO" class="" style="width:85.44792175292969px">37,094</td><td id="ow?z" class="" style="width:85.44792175292969px">39,115</td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-8154-bc48-f44dcefe5e01"><th id="WW}[" class="simple-table-header-color simple-table-header" style="width:73px">OC</th><td id="ZS[F" class="" style="width:85.44792175292969px">11,090</td><td id="@|L_" class="" style="width:85.44792175292969px">12,516</td><td id="q&gt;bE" class="" style="width:85.44792175292969px">14,573</td><td id="NgId" class="" style="width:85.44792175292969px">18,011</td><td id="x:Gv" class="" style="width:85.44792175292969px">19,782</td><td id="MzYT" class="" style="width:85.44792175292969px">21,284</td><td id="SuBo" class="" style="width:85.44792175292969px">24,312</td><td id="JHeS" class="" style="width:85.44792175292969px">25,652</td><td id="S|&lt;?" class="" style="width:85.44792175292969px">26,988</td><td id="mk^e" class="" style="width:85.44792175292969px">27,231</td><td id="dKHO" class="" style="width:85.44792175292969px">28,191</td><td id="ow?z" class="" style="width:85.44792175292969px">29,727</td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-81b2-86a5-d1d13dda1534"><th id="WW}[" class="simple-table-header-color simple-table-header" style="width:73px">Revenue</th><td id="ZS[F" class="" style="width:85.44792175292969px">13,928,473</td><td id="@|L_" class="" style="width:85.44792175292969px">15,720,074</td><td id="q&gt;bE" class="" style="width:85.44792175292969px">18,303,854</td><td id="NgId" class="" style="width:85.44792175292969px">22,591,715</td><td id="x:Gv" class="" style="width:85.44792175292969px">24,812,960</td><td id="MzYT" class="" style="width:85.44792175292969px">26,696,342</td><td id="SuBo" class="" style="width:85.44792175292969px">30,485,020</td><td id="JHeS" class="" style="width:85.44792175292969px">32,165,184</td><td id="S|&lt;?" class="" style="width:85.44792175292969px">33,839,627</td><td id="mk^e" class="" style="width:85.44792175292969px">34,121,676</td><td id="dKHO" class="" style="width:85.44792175292969px">35,325,134</td><td id="ow?z" class="" style="width:85.44792175292969px">37,250,003</td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><h3 id="33614e83-d7d5-8177-a01b-f3d326ced439" class="">Data-Team Dependencies</h3></div><div style="display:contents" dir="ltr"><table id="33614e83-d7d5-819d-8634-f84b8d651a20" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-8195-867d-eac296b33e54"><th id="W=zR" class="simple-table-header-color simple-table-header">Tasks</th><th id="&gt;lwJ" class="simple-table-header-color simple-table-header">No. of Pages</th><th id="k`o_" class="simple-table-header-color simple-table-header">Expected Timelines</th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-8189-bb2e-daa9908228a4"><td id="W=zR" class=""><strong>H1 Header (Product Name) Update</strong></td><td id="&gt;lwJ" class="">~11K Pages (Key Target Pages Pending); All the Pages to be taken up basis new guidelines.<br/><em>Total Count Done (Basis Top-Selling + SEO Priorities): ~20K</em></td><td id="k`o_" class="">Jun’24 <em>(Key Pages)<br/></em>Sep’24<em> (Rest of the Pages)</em></td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-816c-9b2a-fe6a205ebf8a"><td id="W=zR" class=""><strong>Product Image Update</strong></td><td id="&gt;lwJ" class="">~15K Product Images Required with 4 Images Present Minimum<br/></td><td id="k`o_" class="">Jul’24</td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-816e-a576-fc9fccb0100e"><td id="W=zR" class=""><strong>Verification of Salt Composition on Product Pages</strong></td><td id="&gt;lwJ" class="">~Salt Composition to be reviewed for all the Rx required pages before scaling content.<br/><em>~12K Pages Verified and Corrected</em></td><td id="k`o_" class="">Parallel to content requirements.</td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><h3 id="33614e83-d7d5-81c8-844d-d655526383bf" class="">Review &amp; Publishing Dependencies</h3></div><div style="display:contents" dir="ltr"><table id="33614e83-d7d5-8196-9d3c-cd80c998db6a" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-8131-a625-c1865e5818e3"><th id="GhuR" class="simple-table-header-color simple-table-header" style="width:67px">S. No.</th><th id="Q=Tz" class="simple-table-header-color simple-table-header" style="width:120px">Content Type</th><th id="z=kI" class="simple-table-header-color simple-table-header" style="width:120px">May’24</th><th id="Btbq" class="simple-table-header-color simple-table-header" style="width:120px">Jun’24</th><th id="@QsJ" class="simple-table-header-color simple-table-header" style="width:120px">July’24</th><th id="JvdV" class="simple-table-header-color simple-table-header" style="width:120px">Aug’24</th><th id="BcHy" class="simple-table-header-color simple-table-header" style="width:166px">Dependencies</th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-8145-9672-c4a08627f6b8"><td id="GhuR" class="" style="width:67px">1.</td><td id="Q=Tz" class="" style="width:120px"><strong>Rx Required (PDP) - </strong><em><strong>Unique + Programmatic</strong></em></td><td id="z=kI" class="" style="width:120px">2,280 Pages<br/></td><td id="Btbq" class="" style="width:120px">1,810 Unique Content Pages + 15,000 Programmatic Pages (Includes 8,610 Key Pages)</td><td id="@QsJ" class="" style="width:120px">~35,000 Programmatic Content</td><td id="JvdV" class="" style="width:120px">~40,000 Programmatic Content</td><td id="BcHy" class="" style="width:166px"><em>1. Data Verification for Salt Compositions.<br/>2. Doctor Reviews</em></td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-81d6-818f-c6062865198b"><td id="GhuR" class="" style="width:67px">2.</td><td id="Q=Tz" class="" style="width:120px"><strong>Salt Pages</strong></td><td id="z=kI" class="" style="width:120px">250 Pages</td><td id="Btbq" class="" style="width:120px">800 Pages</td><td id="@QsJ" class="" style="width:120px">1,225 Pages</td><td id="JvdV" class="" style="width:120px">~800 Pages</td><td id="BcHy" class="" style="width:166px"><em>1. Salt Page Publishing Portal<br/>2. Doctor Reviews</em></td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-81b1-b201-eef02a675397"><td id="GhuR" class="" style="width:67px">3.</td><td id="Q=Tz" class="" style="width:120px"><strong>Disease Pages</strong></td><td id="z=kI" class="" style="width:120px">150 Pages</td><td id="Btbq" class="" style="width:120px">150 Pages</td><td id="@QsJ" class="" style="width:120px">126 Pages</td><td id="JvdV" class="" style="width:120px">-</td><td id="BcHy" class="" style="width:166px"><em>1. Disease Page Publishing Portal &amp; Page Live</em></td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-81d9-abe3-de182f927dbf"><td id="GhuR" class="" style="width:67px">4. </td><td id="Q=Tz" class="" style="width:120px"><strong>Ayurveda Ingredient Pages</strong></td><td id="z=kI" class="" style="width:120px">-</td><td id="Btbq" class="" style="width:120px">150 Pages</td><td id="@QsJ" class="" style="width:120px">152 Pages</td><td id="JvdV" class="" style="width:120px">-</td><td id="BcHy" class="" style="width:166px"><em>1. Ayurveda Page Publishing Portal &amp; Page Live</em></td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-8173-b165-e8f370e80c62"><td id="GhuR" class="" style="width:67px">5. </td><td id="Q=Tz" class="" style="width:120px"><strong>Blog Pages (New)</strong></td><td id="z=kI" class="" style="width:120px">46 Pages</td><td id="Btbq" class="" style="width:120px">60 Pages</td><td id="@QsJ" class="" style="width:120px">60 Pages</td><td id="JvdV" class="" style="width:120px">60 Pages</td><td id="BcHy" class="" style="width:166px"></td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-81ad-a692-f4498bad49fb"><td id="GhuR" class="" style="width:67px">6.</td><td id="Q=Tz" class="" style="width:120px"><strong>Blog Pages (Re-optimizations)</strong></td><td id="z=kI" class="" style="width:120px">20 Pages</td><td id="Btbq" class="" style="width:120px">20 Pages</td><td id="@QsJ" class="" style="width:120px">20 Pages</td><td id="JvdV" class="" style="width:120px">20 Pages</td><td id="BcHy" class="" style="width:166px"></td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-816b-85f6-dcd686dc0d23"><td id="GhuR" class="" style="width:67px">7.</td><td id="Q=Tz" class="" style="width:120px"><strong>OTC Pages</strong></td><td id="z=kI" class="" style="width:120px">2,000 Pages</td><td id="Btbq" class="" style="width:120px">2,500 Pages</td><td id="@QsJ" class="" style="width:120px">3,000 Pages</td><td id="JvdV" class="" style="width:120px">4,000 Pages</td><td id="BcHy" class="" style="width:166px"></td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-815a-b0f1-c7bbbc2486a4"><td id="GhuR" class="" style="width:67px">8. </td><td id="Q=Tz" class="" style="width:120px"><strong>Web-Stories</strong></td><td id="z=kI" class="" style="width:120px">-</td><td id="Btbq" class="" style="width:120px">-</td><td id="@QsJ" class="" style="width:120px">15 Posts</td><td id="JvdV" class="" style="width:120px">15 Posts</td><td id="BcHy" class="" style="width:166px"><em>Web Story Live</em></td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><h2 id="33614e83-d7d5-810f-95b7-cb94d84b8b7e" class="">Off-Page Activities</h2></div><div style="display:contents" dir="auto"><h3 id="33614e83-d7d5-81e9-a781-ce9540e28239" class="">Paid Guest Postings</h3></div><div style="display:contents" dir="ltr"><table id="33614e83-d7d5-81ae-99e8-dad3ec6f1298" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-814c-ac60-d900a108f4fd"><th id="Cy@R" class="simple-table-header-color simple-table-header" style="width:115px"><strong>Paid GP Plan &amp; Costing</strong></th><th id="uPqa" class="simple-table-header-color simple-table-header" style="width:70.35417175292969px"></th><th id=";^E]" class="simple-table-header-color simple-table-header" style="width:70.35417175292969px"></th><th id="fC_s" class="simple-table-header-color simple-table-header" style="width:70.35417175292969px"></th><th id="q;uT" class="simple-table-header-color simple-table-header" style="width:70.35417175292969px"></th><th id="LxQX" class="simple-table-header-color simple-table-header" style="width:70.35417175292969px"></th><th id="tHYw" class="simple-table-header-color simple-table-header" style="width:70.35417175292969px"></th><th id="|aCz" class="simple-table-header-color simple-table-header" style="width:70.35417175292969px"></th><th id="|Pr@" class="simple-table-header-color simple-table-header" style="width:70.35417175292969px"></th><th id="pqGN" class="simple-table-header-color simple-table-header" style="width:70.35417175292969px"></th><th id="ADE?" class="simple-table-header-color simple-table-header" style="width:70.35417175292969px"></th><th id="upE:" class="simple-table-header-color simple-table-header" style="width:70.35417175292969px"></th><th id="O&lt;Cx" class="simple-table-header-color simple-table-header" style="width:70.35417175292969px"></th><th id="Sx?I" class="simple-table-header-color simple-table-header" style="width:70.35417175292969px"></th><th id="wfCc" class="simple-table-header-color simple-table-header" style="width:70.35417175292969px"></th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-8198-baf9-f635ac8f46ae"><th id="Cy@R" class="block-color-gray_background simple-table-header" style="width:115px">Month</th><td id="uPqa" class="block-color-gray_background" style="width:70.35417175292969px">May&#x27;24</td><td id=";^E]" class="block-color-gray_background" style="width:70.35417175292969px">Jun&#x27;24</td><td id="fC_s" class="block-color-gray_background" style="width:70.35417175292969px">Jul&#x27;24</td><td id="q;uT" class="block-color-gray_background" style="width:70.35417175292969px">Aug&#x27;24</td><td id="LxQX" class="block-color-gray_background" style="width:70.35417175292969px">Sep&#x27;24</td><td id="tHYw" class="block-color-gray_background" style="width:70.35417175292969px">Oct&#x27;24</td><td id="|aCz" class="block-color-gray_background" style="width:70.35417175292969px">Nov&#x27;24</td><td id="|Pr@" class="block-color-gray_background" style="width:70.35417175292969px">Dec&#x27;24</td><td id="pqGN" class="block-color-gray_background" style="width:70.35417175292969px">Jan&#x27;25</td><td id="ADE?" class="block-color-gray_background" style="width:70.35417175292969px">Feb&#x27;25</td><td id="upE:" class="block-color-gray_background" style="width:70.35417175292969px">Mar&#x27;25</td><td id="O&lt;Cx" class="block-color-gray_background" style="width:70.35417175292969px">Apr&#x27;25</td><td id="Sx?I" class="block-color-gray_background" style="width:70.35417175292969px">May&#x27;25</td><td id="wfCc" class="block-color-gray_background" style="width:70.35417175292969px">Jun&#x27;24</td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-8148-82cd-c78cf5ad147b"><th id="Cy@R" class="simple-table-header-color simple-table-header" style="width:115px">Paid GP (No. of Posts)</th><td id="uPqa" class="" style="width:70.35417175292969px">20</td><td id=";^E]" class="" style="width:70.35417175292969px">20</td><td id="fC_s" class="" style="width:70.35417175292969px">20</td><td id="q;uT" class="" style="width:70.35417175292969px">20</td><td id="LxQX" class="" style="width:70.35417175292969px">25-30</td><td id="tHYw" class="" style="width:70.35417175292969px">25-30</td><td id="|aCz" class="" style="width:70.35417175292969px">25-30</td><td id="|Pr@" class="" style="width:70.35417175292969px">25-30</td><td id="pqGN" class="" style="width:70.35417175292969px">25-30</td><td id="ADE?" class="" style="width:70.35417175292969px">25-30</td><td id="upE:" class="" style="width:70.35417175292969px">25-30</td><td id="O&lt;Cx" class="" style="width:70.35417175292969px">30-35</td><td id="Sx?I" class="" style="width:70.35417175292969px">30-35</td><td id="wfCc" class="" style="width:70.35417175292969px">30-35</td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-81aa-86eb-dd8562912570"><th id="Cy@R" class="simple-table-header-color simple-table-header" style="width:115px">Paid GP Costing</th><td id="uPqa" class="" style="width:70.35417175292969px">1,25,000</td><td id=";^E]" class="" style="width:70.35417175292969px">1,25,000</td><td id="fC_s" class="" style="width:70.35417175292969px">1,25,000</td><td id="q;uT" class="" style="width:70.35417175292969px">1,25,000</td><td id="LxQX" class="" style="width:70.35417175292969px">1,87,500</td><td id="tHYw" class="" style="width:70.35417175292969px">1,87,500</td><td id="|aCz" class="" style="width:70.35417175292969px">1,87,500</td><td id="|Pr@" class="" style="width:70.35417175292969px">1,87,500</td><td id="pqGN" class="" style="width:70.35417175292969px">1,87,500</td><td id="ADE?" class="" style="width:70.35417175292969px">1,87,500</td><td id="upE:" class="" style="width:70.35417175292969px">1,87,500</td><td id="O&lt;Cx" class="" style="width:70.35417175292969px">2,18,750</td><td id="Sx?I" class="" style="width:70.35417175292969px">2,18,750</td><td id="wfCc" class="" style="width:70.35417175292969px">2,18,750</td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><h1 id="33614e83-d7d5-81a6-93de-d8d11c0ee3d2" class="">ASO</h1></div><div style="display:contents" dir="auto"><p id="33614e83-d7d5-8174-9074-c772b7770995" class=""><a href="https://docs.google.com/spreadsheets/d/1Zk8jBw-bPlRFHi2e-9eZkiHVhXearelFsF59wN8f-E0/edit?gid=2645525#gid=2645525">https://docs.google.com/spreadsheets/d/1Zk8jBw-bPlRFHi2e-9eZkiHVhXearelFsF59wN8f-E0/edit?gid=2645525#gid=2645525</a></p></div><div style="display:contents" dir="ltr"><table id="33614e83-d7d5-8108-9433-ffe759d19a48" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-8100-923c-f0b9b337e905"><th id="{hrG" class="simple-table-header-color simple-table-header"><strong>Category</strong></th><th id="tZCf" class="simple-table-header-color simple-table-header" style="width:246.9973907470703px"><strong>Activities</strong></th><th id="dWvc" class="simple-table-header-color simple-table-header"><strong>Q1</strong></th><th id="nqz~" class="simple-table-header-color simple-table-header"><strong>Q2</strong></th><th id="~w~b" class="simple-table-header-color simple-table-header"><strong>Q3</strong></th><th id=";MCz" class="simple-table-header-color simple-table-header"><strong>Q4</strong></th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-8162-9703-d64be9245118"><th id="{hrG" class="simple-table-header-color simple-table-header"><strong>Onsite</strong></th><td id="tZCf" class="" style="width:246.9973907470703px"><strong>App Short Description (A/B Testing)</strong></td><td id="dWvc" class=""><em>Every Month</em></td><td id="nqz~" class=""><em>Every Month</em></td><td id="~w~b" class=""><em>Every Month</em></td><td id=";MCz" class=""><em>Every Month</em></td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-81ef-bc44-cf38641c5e70"><th id="{hrG" class="simple-table-header-color simple-table-header"></th><td id="tZCf" class="" style="width:246.9973907470703px"><strong>App Long Description (A/B Testing)</strong></td><td id="dWvc" class=""><em>Every Month</em></td><td id="nqz~" class=""><em>Every Month</em></td><td id="~w~b" class=""><em>Every Month</em></td><td id=";MCz" class=""><em>Every Month</em></td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-81a5-a9f9-da441b8ff1c6"><th id="{hrG" class="simple-table-header-color simple-table-header"></th><td id="tZCf" class="" style="width:246.9973907470703px"><strong>Screenshot  (A/B Testing)</strong></td><td id="dWvc" class=""><em>Depend on Need</em></td><td id="nqz~" class=""><em>Depend on Need</em></td><td id="~w~b" class=""><em>Depend on Need</em></td><td id=";MCz" class=""><em>Depend on Need</em></td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-8109-a015-eaa2b302ecfe"><th id="{hrG" class="simple-table-header-color simple-table-header"><strong>Review &amp; Ratings</strong></th><td id="tZCf" class="" style="width:246.9973907470703px"><strong>Reviews &amp; Ratings Seeding</strong></td><td id="dWvc" class="">600</td><td id="nqz~" class="">600</td><td id="~w~b" class="">600</td><td id=";MCz" class="">600</td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-8156-b46a-f16c52d4fd6f"><th id="{hrG" class="simple-table-header-color simple-table-header"><strong>Off-App</strong></th><td id="tZCf" class="" style="width:246.9973907470703px"><strong>Article  / Guest Post Submission</strong></td><td id="dWvc" class="">30</td><td id="nqz~" class="">30</td><td id="~w~b" class="">30</td><td id=";MCz" class="">30</td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-814a-a74b-ee4a92da7c0a"><th id="{hrG" class="simple-table-header-color simple-table-header"></th><td id="tZCf" class="" style="width:246.9973907470703px"><strong>Quora Submission</strong></td><td id="dWvc" class="">30</td><td id="nqz~" class="">30</td><td id="~w~b" class="">45</td><td id=";MCz" class="">45</td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-810a-ae53-e1c28d8d5c3b"><th id="{hrG" class="simple-table-header-color simple-table-header"></th><td id="tZCf" class="" style="width:246.9973907470703px"><strong>Paid Guest Posting</strong></td><td id="dWvc" class="">24</td><td id="nqz~" class="">24</td><td id="~w~b" class="">24</td><td id=";MCz" class="">24</td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-8134-ba9f-dd2582a30f66"><th id="{hrG" class="simple-table-header-color simple-table-header"></th><td id="tZCf" class="" style="width:246.9973907470703px"><strong>Link Insertion on Already Ranked Articles</strong></td><td id="dWvc" class="">6</td><td id="nqz~" class="">6</td><td id="~w~b" class="">6</td><td id=";MCz" class="">6</td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-818b-a8a1-fae88f27f63f"><th id="{hrG" class="simple-table-header-color simple-table-header"></th><td id="tZCf" class="" style="width:246.9973907470703px"><strong>Classified Submission</strong></td><td id="dWvc" class="">30</td><td id="nqz~" class="">30</td><td id="~w~b" class="">30</td><td id=";MCz" class="">30</td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-819d-9ad0-f70ecd43ddef"><th id="{hrG" class="simple-table-header-color simple-table-header">Rating Goals (4.6-4.7 Stars)</th><td id="tZCf" class="" style="width:246.9973907470703px"><em>Need product support on initiating journeys to achieve this number.</em></td><td id="dWvc" class="">-</td><td id="nqz~" class="">-</td><td id="~w~b" class="">-</td><td id=";MCz" class="">-</td></tr></div></tbody></table></div><div style="display:contents" dir="ltr"><table id="33614e83-d7d5-8173-809f-ed8da4f4b137" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-8154-8806-e45b6d615715"><th id="VBz&lt;" class="simple-table-header-color simple-table-header" style="width:71.61458587646484px">Months</th><th id="Otzq" class="simple-table-header-color simple-table-header" style="width:64.61538461538461px">Apr-24</th><th id="W&lt;Xk" class="simple-table-header-color simple-table-header" style="width:85.44792175292969px">May-24</th><th id="[]wy" class="simple-table-header-color simple-table-header" style="width:64.61538461538461px">Jun-24</th><th id="@:]A" class="simple-table-header-color simple-table-header" style="width:64.61538461538461px">Jul-24</th><th id="bouL" class="simple-table-header-color simple-table-header" style="width:85.44792175292969px">Aug-24</th><th id="~fap" class="simple-table-header-color simple-table-header" style="width:64.61538461538461px">Sep-24</th><th id="x\ie" class="simple-table-header-color simple-table-header" style="width:64.61538461538461px">Oct-24</th><th id="t=tB" class="simple-table-header-color simple-table-header" style="width:85.44792175292969px">Nov-24</th><th id="Xtjd" class="simple-table-header-color simple-table-header" style="width:64.61538461538461px">Dec-24</th><th id="QF\T" class="simple-table-header-color simple-table-header" style="width:64.61538461538461px">Jan-25</th><th id="k`Mr" class="simple-table-header-color simple-table-header" style="width:64.61538461538461px">Feb-25</th><th id="{|k`" class="simple-table-header-color simple-table-header" style="width:64.61538461538461px">Mar-25</th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-818d-ac72-ea1785ed473e"><th id="VBz&lt;" class="simple-table-header-color simple-table-header" style="width:71.61458587646484px">Total Installs (SLA)</th><td id="Otzq" class="" style="width:64.61538461538461px">49,493</td><td id="W&lt;Xk" class="" style="width:85.44792175292969px">50,483</td><td id="[]wy" class="" style="width:64.61538461538461px">51,493</td><td id="@:]A" class="" style="width:64.61538461538461px">53,037</td><td id="bouL" class="" style="width:85.44792175292969px">54,628</td><td id="~fap" class="" style="width:64.61538461538461px">56,267</td><td id="x\ie" class="" style="width:64.61538461538461px">57,955</td><td id="t=tB" class="" style="width:85.44792175292969px">59,694</td><td id="Xtjd" class="" style="width:64.61538461538461px">61,485</td><td id="QF\T" class="" style="width:64.61538461538461px">63,329</td><td id="k`Mr" class="" style="width:64.61538461538461px">65,229</td><td id="{|k`" class="" style="width:64.61538461538461px">67,186</td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-8187-9069-d859a397ffb1"><th id="VBz&lt;" class="simple-table-header-color simple-table-header" style="width:71.61458587646484px">ASO OC</th><td id="Otzq" class="" style="width:64.61538461538461px">14,897</td><td id="W&lt;Xk" class="" style="width:85.44792175292969px">15,195</td><td id="[]wy" class="" style="width:64.61538461538461px">15,499</td><td id="@:]A" class="" style="width:64.61538461538461px">15,964</td><td id="bouL" class="" style="width:85.44792175292969px">16,443</td><td id="~fap" class="" style="width:64.61538461538461px">16,936</td><td id="x\ie" class="" style="width:64.61538461538461px">17,445</td><td id="t=tB" class="" style="width:85.44792175292969px">17,968</td><td id="Xtjd" class="" style="width:64.61538461538461px">18,507</td><td id="QF\T" class="" style="width:64.61538461538461px">19,062</td><td id="k`Mr" class="" style="width:64.61538461538461px">19,634</td><td id="{|k`" class="" style="width:64.61538461538461px">20,223</td></tr></div><div style="display:contents" dir="ltr"><tr id="33614e83-d7d5-81a0-ab81-d9a3c4cc4005"><th id="VBz&lt;" class="simple-table-header-color simple-table-header" style="width:71.61458587646484px">ASO Revenue</th><td id="Otzq" class="" style="width:64.61538461538461px">15,001,675</td><td id="W&lt;Xk" class="" style="width:85.44792175292969px">15,301,708</td><td id="[]wy" class="" style="width:64.61538461538461px">15,607,742</td><td id="@:]A" class="" style="width:64.61538461538461px">16,075,975</td><td id="bouL" class="" style="width:85.44792175292969px">16,558,254</td><td id="~fap" class="" style="width:64.61538461538461px">17,055,002</td><td id="x\ie" class="" style="width:64.61538461538461px">17,566,652</td><td id="t=tB" class="" style="width:85.44792175292969px">18,093,651</td><td id="Xtjd" class="" style="width:64.61538461538461px">18,636,461</td><td id="QF\T" class="" style="width:64.61538461538461px">19,195,554</td><td id="k`Mr" class="" style="width:64.61538461538461px">19,771,421</td><td id="{|k`" class="" style="width:64.61538461538461px">20,364,564</td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><p id="33614e83-d7d5-813b-b7ea-f3fa4eb6bd69" class="">
+</p></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
