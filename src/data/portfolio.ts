@@ -36,7 +36,7 @@ export const awards = [
 export const aboutFacts = [
   { label: "Current Role", value: "Organic Growth Lead, Truemeds" },
   { label: "Experience", value: "6+ Years" },
-  { label: "Education", value: "MBA, Warwick Business School" },
+  { label: "Education", value: "B.Tech, BML Munjal University" },
   { label: "Budget Managed", value: "$2–3M Annually" },
 ];
 
