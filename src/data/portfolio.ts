@@ -41,7 +41,7 @@ export const aboutFacts = [
 ];
 
 export const brands: { name: string; logo: string; primary?: boolean; dark?: boolean }[] = [
-  { name: "Truemeds", logo: "https://du8ef2qvb6oy7.cloudfront.net/media/images/1018f6b6-263e-44df-b129-a360601ca484/truemedslogo2x.png?fm=jpg&q=80&fit=crop&w=900&h=470&crop=1000%2C1000%2C0%2C0", primary: true },
+  { name: "Truemeds", logo: "https://assets.truemeds.in/Images/website-assets/images/logo/truemedslogonav.svg", primary: true },
   { name: "Amazon Business", logo: "/portfolio/amazon_business.png" },
   { name: "P&G", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Procter_%26_Gamble_logo.svg/250px-Procter_%26_Gamble_logo.svg.png" },
   { name: "Microsoft SMB", logo: "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" },
@@ -55,7 +55,7 @@ export const brands: { name: string; logo: string; primary?: boolean; dark?: boo
   { name: "Emami Zanducare", logo: "https://upload.wikimedia.org/wikipedia/en/e/ea/Zandu_Realty.png" },
   { name: "Foxstar Studios", logo: "https://www.behindwoods.com/tamil-movies/slideshow/best-logo-blocks-of-production-companies/images/fox-star-studios.jpg" },
   { name: "Charlie Banana", logo: "https://www.charliebanana.com/cdn/shop/files/CB_Logo_legacy_a4c3c7ec-032b-4de5-a2e6-3b764e4e54ae.png?crop=center&height=1200&v=1755333831&width=1200" },
-  { name: "PlantX", logo: "https://plantx.com/cdn/shop/files/newlogo_black.png?v=1628253174&width=500" },
+  { name: "PlantX", logo: "https://logo.clearbit.com/plantx.com" },
   { name: "Prepaze", logo: "/portfolio/prepaze_logo_kkhxn5.svg" },
   { name: "GREedge", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1KfMN9A5G7_BEKzftNv1yLEeidBDu9geP6Q&s" },
 ];
