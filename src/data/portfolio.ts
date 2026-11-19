@@ -55,7 +55,7 @@ export const brands: { name: string; logo: string; primary?: boolean; dark?: boo
   { name: "Emami Zanducare", logo: "https://upload.wikimedia.org/wikipedia/en/e/ea/Zandu_Realty.png" },
   { name: "Foxstar Studios", logo: "https://www.behindwoods.com/tamil-movies/slideshow/best-logo-blocks-of-production-companies/images/fox-star-studios.jpg" },
   { name: "Charlie Banana", logo: "https://www.charliebanana.com/cdn/shop/files/CB_Logo_legacy_a4c3c7ec-032b-4de5-a2e6-3b764e4e54ae.png?crop=center&height=1200&v=1755333831&width=1200" },
-  { name: "PlantX", logo: "/ebc66836-820d-4825-9ec4-e2bfa4832d73-1795099172710_image.png" },
+  { name: "PlantX", logo: "/portfolio/ebc66836-820d-4825-9ec4-e2bfa4832d73-1795099172710_image.png" },
   { name: "Prepaze", logo: "/portfolio/prepaze_logo_kkhxn5.svg" },
   { name: "GREedge", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1KfMN9A5G7_BEKzftNv1yLEeidBDu9geP6Q&s" },
 ];
